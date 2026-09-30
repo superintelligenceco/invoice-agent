@@ -1,0 +1,8 @@
+{
+  "price_tolerance_pct": "0.05",
+  "price_tolerance_abs": "0.10",
+  "qty_tolerance_pct": "0",
+  "vendor_match_threshold": 85,
+  "duplicate_window_days": 30,
+  "require_po_number": true
+}
