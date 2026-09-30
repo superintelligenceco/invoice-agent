@@ -5,7 +5,7 @@ BIN    := $(VENV)/bin
 
 .DEFAULT_GOAL := help
 
-.PHONY: help setup lint fmt typecheck test cov bench eval build exe docs docs-serve clean
+.PHONY: help setup lint fmt typecheck test cov bench mutate eval build exe demo docs docs-serve up clean
 
 help: ## List the available targets
 	@awk 'BEGIN {FS = ":.*## "} /^[a-zA-Z_-]+:.*## / {printf "  %-12s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -35,6 +35,11 @@ cov: ## Run the tests with a coverage report
 bench: ## Run the benchmarks and compare with the committed baseline
 	$(BIN)/python scripts/bench_check.py
 
+mutate: ## Run mutation testing on normalize.py and validate.py
+	$(BIN)/pip install mutmut
+	$(BIN)/mutmut run --max-children 4
+	$(BIN)/mutmut results
+
 eval: ## Score extraction and matching on the shipped dataset
 	$(BIN)/invoice-agent eval --min-decision-accuracy 1
 
@@ -46,6 +51,13 @@ exe: ## Build a standalone executable into dist/ with PyInstaller
 	$(BIN)/pip install ".[api]" pyinstaller
 	$(BIN)/pyinstaller --onefile --name invoice-agent --noconfirm --collect-data invoice_agent \
 	  --collect-data pdfminer --collect-submodules uvicorn packaging/entry.py
+
+demo: exe ## Record docs/assets/demo.gif with vhs in Docker, from the executable in dist/
+	docker run --rm -v "$(CURDIR):/vhs" -v "$(CURDIR)/dist:/opt/invoice-agent:ro" \
+	  ghcr.io/charmbracelet/vhs docs/demo/demo.tape
+
+up: ## Run the web page and HTTP API on http://localhost:8000 with docker compose
+	docker compose up --build
 
 docs: ## Build the documentation site into site/
 	$(BIN)/mkdocs build --strict

@@ -7,6 +7,10 @@ needs-review, or reject decision with the reasons spelled out.**
 [![Eval](https://github.com/superintelligenceco/invoice-agent/actions/workflows/eval.yml/badge.svg)](https://github.com/superintelligenceco/invoice-agent/actions/workflows/eval.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
+[![PyPI](https://img.shields.io/pypi/v/invoice-agent.svg)](https://pypi.org/project/invoice-agent/)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue.svg)](https://superintelligenceco.github.io/invoice-agent/)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/superintelligenceco/invoice-agent/badge)](https://scorecard.dev/viewer/?uri=github.com/superintelligenceco/invoice-agent)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/superintelligenceco/invoice-agent?quickstart=1)
 
 invoice-agent is an accounts-payable pipeline you can run offline. It pulls structured data out of
 an invoice PDF, checks the arithmetic, finds the purchase order, aligns every invoice line with a
@@ -17,10 +21,30 @@ so a reviewer sees why an invoice stopped, and a script can route it.
 It ships with a labeled dataset of 50 synthetic invoices in five vendor layouts and an `eval`
 command that scores extraction and matching on it.
 
+![invoice-agent processing three invoices and running the eval](docs/assets/demo.gif)
+
+Read the full documentation at
+[superintelligenceco.github.io/invoice-agent](https://superintelligenceco.github.io/invoice-agent/).
+
 ## Download and run
 
-Every release ships three ways to run invoice-agent. None of them needs Python on your machine
-except the wheel.
+Install from PyPI:
+
+```sh
+pip install invoice-agent            # CLI, layout and LLM extractors
+pip install "invoice-agent[api]"     # plus the web page and HTTP API
+```
+
+Or install the standalone executable, which needs no Python, with one command. The script picks
+the release asset for your OS and CPU, checks it against `SHA256SUMS`, and installs it into
+`~/.local/bin`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/superintelligenceco/invoice-agent/main/install.sh | sh
+```
+
+Every release also ships the container image, the executables, and the wheel and sdist as
+described below.
 
 ### Web app in a container
 
@@ -33,6 +57,8 @@ docker run --rm -p 8000:8000 ghcr.io/superintelligenceco/invoice-agent:latest
 # open http://localhost:8000
 curl -s -F "file=@dataset/invoices/016_b04.pdf" http://localhost:8000/process
 ```
+
+From a clone, `docker compose up --build` builds and runs the same service.
 
 The image loads the sample POs and receipts from the shipped dataset. To match against your own,
 mount them and pass the paths:
@@ -67,7 +93,8 @@ chmod +x invoice-agent-linux-x64
 ### Wheel and sdist
 
 Each release attaches `invoice_agent-X.Y.Z-py3-none-any.whl` and `invoice_agent-X.Y.Z.tar.gz`.
-Install the wheel with the extras you need:
+The same files are on [PyPI](https://pypi.org/project/invoice-agent/). To install the wheel from
+the release instead, with the extras you need:
 
 ```sh
 VERSION=0.2.0
@@ -264,7 +291,7 @@ Run `invoice-agent eval --oracle` to score the matching rules with ground-truth 
 `--format json` for machine-readable output. The [Eval workflow](.github/workflows/eval.yml)
 posts both tables to the job summary on every push.
 
-## Install
+## Install from source
 
 ```sh
 pip install -e .              # CLI, layout and LLM extractors

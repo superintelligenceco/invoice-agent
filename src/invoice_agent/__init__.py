@@ -2,6 +2,6 @@
 
 from .schema import Decision, Invoice, LineItem, PurchaseOrder, Reason, Result
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = ["Decision", "Invoice", "LineItem", "PurchaseOrder", "Reason", "Result", "__version__"]

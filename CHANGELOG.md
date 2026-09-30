@@ -6,8 +6,22 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-30
+
+invoice-agent now ships as a package on PyPI, standalone executables, and a signed multi-arch
+container image, with a documentation site.
+
 ### Added
 
+- The package on PyPI: `pip install invoice-agent`.
+- An installer: `curl -fsSL https://raw.githubusercontent.com/superintelligenceco/invoice-agent/main/install.sh | sh`
+  downloads the executable for your OS and CPU and checks it against `SHA256SUMS`.
+- A documentation site at https://superintelligenceco.github.io/invoice-agent/ with a
+  quickstart, concepts, an architecture diagram, CLI, HTTP, and Python API reference, an FAQ,
+  and architecture decision records.
+- `compose.yaml`: `docker compose up --build` runs the web page and API.
+- SPDX SBOMs for the source tree and the image, build provenance attestations for every release
+  file and the image, and a keyless cosign signature on the image.
 - A web page at `/` of the HTTP service: upload an invoice PDF and see the extracted fields, the
   line matches, and the decision with its reasons. It is a single static file with no new
   dependencies.
@@ -17,6 +31,18 @@ All notable changes to this project are documented in this file. The format foll
   `vX.Y.Z` and `latest` on releases and `edge` on manual builds.
 - The wheel and sdist attached to each GitHub Release.
 - A Ship workflow that builds and smoke-tests all of the above when you push a `v*` tag.
+- Development setup: a Makefile, pre-commit hooks, a dev container with a Codespaces badge, VS
+  Code settings, `CITATION.cff`, and `llms.txt`.
+- Tests: property-based tests of parsing, arithmetic, alignment, and decisions; a test that runs
+  every command in the README and compares the output; benchmarks that fail CI above 2x the
+  committed baseline; weekly mutation testing of the pure core; and a nightly run that posts
+  every shipped invoice to the container over HTTP.
+- Workflows: OpenSSF Scorecard, dependency review, actionlint, a Markdown link check, and Trivy
+  scanning of the image.
+
+### Changed
+
+- Releases come only from pushed `v*` tags. release-please is gone.
 
 ### Fixed
 
@@ -68,5 +94,6 @@ goods receipts, and returns an auto-approve, needs-review, or reject decision wi
 - Decision accuracy, PO link accuracy, exception and reject precision and recall, and reason code
   precision and recall are all 100.0% on the 50 invoices.
 
-[Unreleased]: https://github.com/superintelligenceco/invoice-agent/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/superintelligenceco/invoice-agent/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/superintelligenceco/invoice-agent/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/superintelligenceco/invoice-agent/releases/tag/v0.1.0

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "invoice-agent"
-version = "0.1.0"
+version = "0.2.0"
 description = "Extract invoice PDFs and run 2-way/3-way matching against purchase orders and receipts, with explainable decisions."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -95,3 +95,28 @@ branch = true
 [tool.coverage.report]
 show_missing = true
 skip_covered = true
+
+[tool.mutmut]
+# Scoped to the pure core. Run with `make mutate`; the Mutation workflow runs it weekly.
+source_paths = ["src/invoice_agent"]
+do_not_mutate = [
+  "src/invoice_agent/api.py",
+  "src/invoice_agent/cli.py",
+  "src/invoice_agent/data.py",
+  "src/invoice_agent/evaluate.py",
+  "src/invoice_agent/ingest.py",
+  "src/invoice_agent/match.py",
+  "src/invoice_agent/pipeline.py",
+  "src/invoice_agent/policy.py",
+  "src/invoice_agent/reasons.py",
+  "src/invoice_agent/schema.py",
+  "src/invoice_agent/__init__.py",
+  "src/invoice_agent/extract/*",
+  "src/invoice_agent/synth/*",
+]
+pytest_add_cli_args_test_selection = [
+  "tests/test_normalize.py",
+  "tests/test_validate.py",
+  "tests/test_properties.py",
+]
+pytest_add_cli_args = ["--benchmark-disable", "-p", "no:cacheprovider"]
