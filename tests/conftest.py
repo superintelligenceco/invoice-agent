@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import json
+import os
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
 import pytest
+from hypothesis import HealthCheck, settings
 
 from invoice_agent.schema import (
     GoodsReceipt,
@@ -15,6 +17,15 @@ from invoice_agent.schema import (
     PurchaseOrder,
     ReceiptLine,
 )
+
+settings.register_profile("default", max_examples=100, deadline=None)
+settings.register_profile(
+    "nightly",
+    max_examples=2000,
+    deadline=None,
+    suppress_health_check=[HealthCheck.too_slow],
+)
+settings.load_profile(os.environ.get("HYPOTHESIS_PROFILE", "default"))
 
 ROOT = Path(__file__).resolve().parent.parent
 DATASET = ROOT / "dataset"
