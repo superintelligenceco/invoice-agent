@@ -74,3 +74,9 @@ jobs:
         run: |
           docker run --rm invoice-agent:ci --version
           docker run --rm invoice-agent:ci eval --min-decision-accuracy 1 > /dev/null
+          docker run -d --rm --name smoke -p 8000:8000 invoice-agent:ci
+          for _ in $(seq 30); do curl -fsS http://127.0.0.1:8000/health && break; sleep 1; done
+          curl -fsS http://127.0.0.1:8000/ | grep -q 'type="file"'
+          curl -fsS -F file=@dataset/invoices/001_q01.pdf http://127.0.0.1:8000/process \
+            | grep -q '"decision":"auto_approve"'
+          docker stop smoke

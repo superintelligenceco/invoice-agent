@@ -6,6 +6,9 @@ COPY src ./src
 RUN pip install --no-cache-dir build && python -m build --wheel --outdir /dist
 
 FROM python:3.12-slim
+LABEL org.opencontainers.image.source="https://github.com/superintelligenceco/invoice-agent" \
+      org.opencontainers.image.description="Invoice extraction and PO matching: web page and HTTP API" \
+      org.opencontainers.image.licenses="Apache-2.0"
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 COPY --from=build /dist/*.whl /tmp/
 RUN whl="$(ls /tmp/*.whl)" && pip install --no-cache-dir "${whl}[api]" && rm -f /tmp/*.whl
