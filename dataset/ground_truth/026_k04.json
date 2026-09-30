@@ -1,0 +1,41 @@
+{
+  "file": "invoices/026_k04.pdf",
+  "case": "k04",
+  "vendor_layout": "kettleby",
+  "description": "Printed total is 10.00 higher than subtotal plus VAT",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00874",
+    "invoice_date": "2026-03-27",
+    "due_date": "2026-04-26",
+    "po_number": "PO-2026-0123",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Microcentrifuge tubes 1.5 mL, natural, bag of 500",
+        "quantity": "6",
+        "unit_price": "12.25",
+        "amount": "73.50",
+        "sku": "KLC-2203"
+      },
+      {
+        "description": "Petri dishes 90 mm, vented, sleeve of 20",
+        "quantity": "5",
+        "unit_price": "6.80",
+        "amount": "34.00",
+        "sku": "KLC-2204"
+      }
+    ],
+    "subtotal": "107.50",
+    "discount": "0.00",
+    "tax": "21.50",
+    "total": "139.00"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0123",
+    "reason_codes": [
+      "TOTAL_MISMATCH"
+    ]
+  }
+}

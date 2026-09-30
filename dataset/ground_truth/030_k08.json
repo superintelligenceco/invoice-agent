@@ -1,0 +1,39 @@
+{
+  "file": "invoices/030_k08.pdf",
+  "case": "k08",
+  "vendor_layout": "kettleby",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00878",
+    "invoice_date": "2026-03-31",
+    "due_date": "2026-04-30",
+    "po_number": "PO-2026-0125",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Lab coat, polycotton, size L",
+        "quantity": "2",
+        "unit_price": "21.00",
+        "amount": "42.00",
+        "sku": "KLC-2206"
+      },
+      {
+        "description": "Petri dishes 90 mm, vented, sleeve of 20",
+        "quantity": "4",
+        "unit_price": "6.80",
+        "amount": "27.20",
+        "sku": "KLC-2204"
+      }
+    ],
+    "subtotal": "69.20",
+    "discount": "0.00",
+    "tax": "13.84",
+    "total": "83.04"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0125",
+    "reason_codes": []
+  }
+}

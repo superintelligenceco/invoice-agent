@@ -1,0 +1,41 @@
+{
+  "file": "invoices/019_b07.pdf",
+  "case": "b07",
+  "vendor_layout": "brightforge",
+  "description": "Billed in USD against a EUR purchase order",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0406",
+    "invoice_date": "2026-03-20",
+    "due_date": "2026-04-19",
+    "po_number": "PO-2026-0116",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Hydraulikschlauch DN10 1m / Hydraulic hose DN10",
+        "quantity": "4",
+        "unit_price": "23.40",
+        "amount": "93.60",
+        "sku": "BF-40220"
+      },
+      {
+        "description": "Industriefett 1kg / Industrial grease 1kg",
+        "quantity": "3",
+        "unit_price": "15.30",
+        "amount": "45.90",
+        "sku": "BF-40660"
+      }
+    ],
+    "subtotal": "139.50",
+    "discount": "0.00",
+    "tax": "26.51",
+    "total": "166.01"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0116",
+    "reason_codes": [
+      "CURRENCY_MISMATCH"
+    ]
+  }
+}

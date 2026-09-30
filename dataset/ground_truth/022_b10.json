@@ -1,0 +1,39 @@
+{
+  "file": "invoices/022_b10.pdf",
+  "case": "b10",
+  "vendor_layout": "brightforge",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0409",
+    "invoice_date": "2026-03-23",
+    "due_date": "2026-04-22",
+    "po_number": "PO-2026-0119",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Sechskantschraube M8x40 / Hex bolt M8x40 (100)",
+        "quantity": "8",
+        "unit_price": "12.10",
+        "amount": "96.80",
+        "sku": "BF-40330"
+      },
+      {
+        "description": "Industriefett 1kg / Industrial grease 1kg",
+        "quantity": "8",
+        "unit_price": "15.30",
+        "amount": "122.40",
+        "sku": "BF-40660"
+      }
+    ],
+    "subtotal": "219.20",
+    "discount": "0.00",
+    "tax": "41.65",
+    "total": "260.85"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0119",
+    "reason_codes": []
+  }
+}

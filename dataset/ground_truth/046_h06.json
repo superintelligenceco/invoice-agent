@@ -1,0 +1,69 @@
+{
+  "file": "invoices/046_h06.pdf",
+  "case": "h06",
+  "vendor_layout": "harborline",
+  "description": "Goods invoiced before any receipt was posted",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778106",
+    "invoice_date": "2026-04-16",
+    "due_date": "2026-05-16",
+    "po_number": "PO-2026-0140",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "OIL FILTER, TYPE A",
+        "quantity": "21",
+        "unit_price": "10.13",
+        "amount": "212.73",
+        "sku": "HFP-5002"
+      },
+      {
+        "description": "SERPENTINE BELT, TYPE A",
+        "quantity": "2",
+        "unit_price": "38.65",
+        "amount": "77.30",
+        "sku": "HFP-5006"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE A",
+        "quantity": "18",
+        "unit_price": "87.56",
+        "amount": "1576.08",
+        "sku": "HFP-5013"
+      },
+      {
+        "description": "OIL FILTER, TYPE C",
+        "quantity": "5",
+        "unit_price": "20.71",
+        "amount": "103.55",
+        "sku": "HFP-5034"
+      },
+      {
+        "description": "AIR FILTER ELEMENT, TYPE C",
+        "quantity": "6",
+        "unit_price": "27.84",
+        "amount": "167.04",
+        "sku": "HFP-5035"
+      },
+      {
+        "description": "BRAKE ROTOR, VENTED, TYPE C",
+        "quantity": "23",
+        "unit_price": "28.53",
+        "amount": "656.19",
+        "sku": "HFP-5048"
+      }
+    ],
+    "subtotal": "2792.89",
+    "discount": "0.00",
+    "tax": "195.50",
+    "total": "2988.39"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0140",
+    "reason_codes": [
+      "QTY_EXCEEDS_RECEIVED"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "file": "invoices/024_k02.pdf",
+  "case": "k02",
+  "vendor_layout": "kettleby",
+  "description": "Long descriptions wrap onto two lines",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00872",
+    "invoice_date": "2026-03-25",
+    "due_date": "2026-04-24",
+    "po_number": "PO-2026-0121",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Serological pipettes, 10 mL, sterile, individually wrapped, case of 200",
+        "quantity": "3",
+        "unit_price": "48.90",
+        "amount": "146.70",
+        "sku": "KLC-2202"
+      },
+      {
+        "description": "Pipette tips 200 uL, racked, pack of 960",
+        "quantity": "2",
+        "unit_price": "39.50",
+        "amount": "79.00",
+        "sku": "KLC-2205"
+      },
+      {
+        "description": "Petri dishes 90 mm, vented, sleeve of 20",
+        "quantity": "10",
+        "unit_price": "6.80",
+        "amount": "68.00",
+        "sku": "KLC-2204"
+      }
+    ],
+    "subtotal": "293.70",
+    "discount": "0.00",
+    "tax": "58.74",
+    "total": "352.44"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0121",
+    "reason_codes": []
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "file": "invoices/033_p02.pdf",
+  "case": "p02",
+  "vendor_layout": "pinecone",
+  "description": "5% invoice-level discount",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0032",
+    "invoice_date": "2026-04-03",
+    "due_date": "2026-05-03",
+    "po_number": "PO-2026-0128",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Security review and hardening",
+        "quantity": "30",
+        "unit_price": "210.00",
+        "amount": "6300.00",
+        "sku": null
+      },
+      {
+        "description": "On-call incident response",
+        "quantity": "20",
+        "unit_price": "160.00",
+        "amount": "3200.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "9500.00",
+    "discount": "475.00",
+    "tax": "0.00",
+    "total": "9025.00"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0128",
+    "reason_codes": []
+  }
+}

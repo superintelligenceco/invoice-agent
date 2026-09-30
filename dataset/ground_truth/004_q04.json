@@ -1,0 +1,41 @@
+{
+  "file": "invoices/004_q04.pdf",
+  "case": "q04",
+  "vendor_layout": "quillfeather",
+  "description": "Billed for 50 units, only 30 received",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10404",
+    "invoice_date": "2026-03-05",
+    "due_date": "2026-04-04",
+    "po_number": "PO-2026-0104",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Copy paper A4 80gsm, ream of 500",
+        "quantity": "50",
+        "unit_price": "6.49",
+        "amount": "324.50",
+        "sku": null
+      },
+      {
+        "description": "Sticky notes 76x76mm, 12 pads",
+        "quantity": "8",
+        "unit_price": "8.60",
+        "amount": "68.80",
+        "sku": null
+      }
+    ],
+    "subtotal": "393.30",
+    "discount": "0.00",
+    "tax": "32.45",
+    "total": "425.75"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0104",
+    "reason_codes": [
+      "QTY_EXCEEDS_RECEIVED"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "file": "invoices/047_h07.pdf",
+  "case": "h07",
+  "vendor_layout": "harborline",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778107",
+    "invoice_date": "2026-04-17",
+    "due_date": "2026-05-17",
+    "po_number": "PO-2026-0141",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "CABIN AIR FILTER, TYPE A",
+        "quantity": "19",
+        "unit_price": "59.04",
+        "amount": "1121.76",
+        "sku": "HFP-5009"
+      },
+      {
+        "description": "FUEL PUMP RELAY, TYPE A",
+        "quantity": "7",
+        "unit_price": "66.17",
+        "amount": "463.19",
+        "sku": "HFP-5010"
+      },
+      {
+        "description": "WHEEL BEARING HUB, TYPE A",
+        "quantity": "21",
+        "unit_price": "73.3",
+        "amount": "1539.30",
+        "sku": "HFP-5011"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE A",
+        "quantity": "1",
+        "unit_price": "80.43",
+        "amount": "80.43",
+        "sku": "HFP-5012"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE A",
+        "quantity": "13",
+        "unit_price": "87.56",
+        "amount": "1138.28",
+        "sku": "HFP-5013"
+      },
+      {
+        "description": "THERMOSTAT HOUSING, TYPE A",
+        "quantity": "3",
+        "unit_price": "4.69",
+        "amount": "14.07",
+        "sku": "HFP-5014"
+      },
+      {
+        "description": "BELT TENSIONER, TYPE A",
+        "quantity": "13",
+        "unit_price": "11.82",
+        "amount": "153.66",
+        "sku": "HFP-5015"
+      },
+      {
+        "description": "BRAKE ROTOR, VENTED, TYPE A",
+        "quantity": "4",
+        "unit_price": "18.95",
+        "amount": "75.80",
+        "sku": "HFP-5016"
+      }
+    ],
+    "subtotal": "4586.49",
+    "discount": "0.00",
+    "tax": "321.05",
+    "total": "4907.54"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0141",
+    "reason_codes": []
+  }
+}

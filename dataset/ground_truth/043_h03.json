@@ -1,0 +1,60 @@
+{
+  "file": "invoices/043_h03.pdf",
+  "case": "h03",
+  "vendor_layout": "harborline",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778103",
+    "invoice_date": "2026-04-13",
+    "due_date": "2026-05-13",
+    "po_number": "PO-2026-0137",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "SPARK PLUG, IRIDIUM, TYPE A",
+        "quantity": "6",
+        "unit_price": "31.52",
+        "amount": "189.12",
+        "sku": "HFP-5005"
+      },
+      {
+        "description": "FUEL PUMP RELAY, TYPE A",
+        "quantity": "24",
+        "unit_price": "66.17",
+        "amount": "1588.08",
+        "sku": "HFP-5010"
+      },
+      {
+        "description": "OIL FILTER, TYPE B",
+        "quantity": "22",
+        "unit_price": "15.42",
+        "amount": "339.24",
+        "sku": "HFP-5018"
+      },
+      {
+        "description": "RADIATOR HOSE, UPPER, TYPE B",
+        "quantity": "18",
+        "unit_price": "50.07",
+        "amount": "901.26",
+        "sku": "HFP-5023"
+      },
+      {
+        "description": "CABIN AIR FILTER, TYPE C",
+        "quantity": "24",
+        "unit_price": "69.62",
+        "amount": "1670.88",
+        "sku": "HFP-5041"
+      }
+    ],
+    "subtotal": "4688.58",
+    "discount": "0.00",
+    "tax": "328.20",
+    "total": "5016.78"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0137",
+    "reason_codes": []
+  }
+}

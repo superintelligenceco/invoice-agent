@@ -1,0 +1,42 @@
+{
+  "file": "invoices/029_k07.pdf",
+  "case": "k07",
+  "vendor_layout": "kettleby",
+  "description": "Resubmission of k01 under a new invoice number",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00877",
+    "invoice_date": "2026-03-24",
+    "due_date": "2026-04-23",
+    "po_number": "PO-2026-0120",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Nitrile examination gloves, powder-free, size M, box of 100",
+        "quantity": "10",
+        "unit_price": "7.45",
+        "amount": "74.50",
+        "sku": "KLC-2201"
+      },
+      {
+        "description": "Microcentrifuge tubes 1.5 mL, natural, bag of 500",
+        "quantity": "4",
+        "unit_price": "12.25",
+        "amount": "49.00",
+        "sku": "KLC-2203"
+      }
+    ],
+    "subtotal": "123.50",
+    "discount": "0.00",
+    "tax": "24.70",
+    "total": "148.20"
+  },
+  "expected": {
+    "decision": "reject",
+    "po_number": "PO-2026-0120",
+    "reason_codes": [
+      "POSSIBLE_DUPLICATE",
+      "QTY_EXCEEDS_ORDERED"
+    ]
+  }
+}

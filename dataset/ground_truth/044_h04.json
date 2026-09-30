@@ -1,0 +1,223 @@
+{
+  "file": "invoices/044_h04.pdf",
+  "case": "h04",
+  "vendor_layout": "harborline",
+  "description": "Two pages; one unit price 15% above PO",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778104",
+    "invoice_date": "2026-04-14",
+    "due_date": "2026-05-14",
+    "po_number": "PO-2026-0138",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "WHEEL BEARING HUB, TYPE A",
+        "quantity": "8",
+        "unit_price": "73.3",
+        "amount": "586.40",
+        "sku": "HFP-5011"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE A",
+        "quantity": "16",
+        "unit_price": "80.43",
+        "amount": "1286.88",
+        "sku": "HFP-5012"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE A",
+        "quantity": "12",
+        "unit_price": "87.56",
+        "amount": "1050.72",
+        "sku": "HFP-5013"
+      },
+      {
+        "description": "THERMOSTAT HOUSING, TYPE A",
+        "quantity": "13",
+        "unit_price": "4.69",
+        "amount": "60.97",
+        "sku": "HFP-5014"
+      },
+      {
+        "description": "BELT TENSIONER, TYPE A",
+        "quantity": "16",
+        "unit_price": "11.82",
+        "amount": "189.12",
+        "sku": "HFP-5015"
+      },
+      {
+        "description": "BRAKE ROTOR, VENTED, TYPE A",
+        "quantity": "16",
+        "unit_price": "18.95",
+        "amount": "303.20",
+        "sku": "HFP-5016"
+      },
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE B",
+        "quantity": "1",
+        "unit_price": "8.29",
+        "amount": "8.29",
+        "sku": "HFP-5017"
+      },
+      {
+        "description": "OIL FILTER, TYPE B",
+        "quantity": "17",
+        "unit_price": "15.42",
+        "amount": "262.14",
+        "sku": "HFP-5018"
+      },
+      {
+        "description": "AIR FILTER ELEMENT, TYPE B",
+        "quantity": "3",
+        "unit_price": "22.55",
+        "amount": "67.65",
+        "sku": "HFP-5019"
+      },
+      {
+        "description": "WIPER BLADE 22IN, TYPE B",
+        "quantity": "7",
+        "unit_price": "29.68",
+        "amount": "207.76",
+        "sku": "HFP-5020"
+      },
+      {
+        "description": "SPARK PLUG, IRIDIUM, TYPE B",
+        "quantity": "3",
+        "unit_price": "36.81",
+        "amount": "110.43",
+        "sku": "HFP-5021"
+      },
+      {
+        "description": "SERPENTINE BELT, TYPE B",
+        "quantity": "20",
+        "unit_price": "43.94",
+        "amount": "878.80",
+        "sku": "HFP-5022"
+      },
+      {
+        "description": "RADIATOR HOSE, UPPER, TYPE B",
+        "quantity": "13",
+        "unit_price": "50.07",
+        "amount": "650.91",
+        "sku": "HFP-5023"
+      },
+      {
+        "description": "HEADLAMP BULB H7, TYPE B",
+        "quantity": "20",
+        "unit_price": "57.2",
+        "amount": "1144.00",
+        "sku": "HFP-5024"
+      },
+      {
+        "description": "CABIN AIR FILTER, TYPE B",
+        "quantity": "19",
+        "unit_price": "64.33",
+        "amount": "1222.27",
+        "sku": "HFP-5025"
+      },
+      {
+        "description": "FUEL PUMP RELAY, TYPE B",
+        "quantity": "23",
+        "unit_price": "71.46",
+        "amount": "1643.58",
+        "sku": "HFP-5026"
+      },
+      {
+        "description": "WHEEL BEARING HUB, TYPE B",
+        "quantity": "23",
+        "unit_price": "90.38",
+        "amount": "2078.74",
+        "sku": "HFP-5027"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE B",
+        "quantity": "13",
+        "unit_price": "85.72",
+        "amount": "1114.36",
+        "sku": "HFP-5028"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE B",
+        "quantity": "3",
+        "unit_price": "92.85",
+        "amount": "278.55",
+        "sku": "HFP-5029"
+      },
+      {
+        "description": "THERMOSTAT HOUSING, TYPE B",
+        "quantity": "18",
+        "unit_price": "9.98",
+        "amount": "179.64",
+        "sku": "HFP-5030"
+      },
+      {
+        "description": "BELT TENSIONER, TYPE B",
+        "quantity": "6",
+        "unit_price": "16.11",
+        "amount": "96.66",
+        "sku": "HFP-5031"
+      },
+      {
+        "description": "BRAKE ROTOR, VENTED, TYPE B",
+        "quantity": "17",
+        "unit_price": "23.24",
+        "amount": "395.08",
+        "sku": "HFP-5032"
+      },
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE C",
+        "quantity": "23",
+        "unit_price": "13.58",
+        "amount": "312.34",
+        "sku": "HFP-5033"
+      },
+      {
+        "description": "OIL FILTER, TYPE C",
+        "quantity": "5",
+        "unit_price": "20.71",
+        "amount": "103.55",
+        "sku": "HFP-5034"
+      },
+      {
+        "description": "AIR FILTER ELEMENT, TYPE C",
+        "quantity": "2",
+        "unit_price": "27.84",
+        "amount": "55.68",
+        "sku": "HFP-5035"
+      },
+      {
+        "description": "WIPER BLADE 22IN, TYPE C",
+        "quantity": "22",
+        "unit_price": "34.97",
+        "amount": "769.34",
+        "sku": "HFP-5036"
+      },
+      {
+        "description": "SPARK PLUG, IRIDIUM, TYPE C",
+        "quantity": "10",
+        "unit_price": "41.1",
+        "amount": "411.00",
+        "sku": "HFP-5037"
+      },
+      {
+        "description": "SERPENTINE BELT, TYPE C",
+        "quantity": "8",
+        "unit_price": "48.23",
+        "amount": "385.84",
+        "sku": "HFP-5038"
+      }
+    ],
+    "subtotal": "15853.90",
+    "discount": "0.00",
+    "tax": "1109.77",
+    "total": "16963.67"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0138",
+    "reason_codes": [
+      "PRICE_VARIANCE"
+    ]
+  }
+}

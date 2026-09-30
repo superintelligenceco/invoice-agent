@@ -1,0 +1,39 @@
+{
+  "file": "invoices/032_p01.pdf",
+  "case": "p01",
+  "vendor_layout": "pinecone",
+  "description": "Clean 2-way match (services)",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0031",
+    "invoice_date": "2026-04-02",
+    "due_date": "2026-05-02",
+    "po_number": "PO-2026-0127",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Cloud architecture consulting",
+        "quantity": "24",
+        "unit_price": "185.00",
+        "amount": "4440.00",
+        "sku": null
+      },
+      {
+        "description": "Managed Kubernetes support",
+        "quantity": "40",
+        "unit_price": "140.00",
+        "amount": "5600.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "10040.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "total": "10040.00"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0127",
+    "reason_codes": []
+  }
+}

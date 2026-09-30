@@ -1,0 +1,41 @@
+{
+  "file": "invoices/016_b04.pdf",
+  "case": "b04",
+  "vendor_layout": "brightforge",
+  "description": "Unit price 8% above PO",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0404",
+    "invoice_date": "2026-03-17",
+    "due_date": "2026-04-16",
+    "po_number": "PO-2026-0114",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Zahnriemen HTD 8M / Timing belt HTD 8M",
+        "quantity": "4",
+        "unit_price": "61.56",
+        "amount": "246.24",
+        "sku": "BF-40440"
+      },
+      {
+        "description": "Druckluftkupplung / Pneumatic coupler 1/4in",
+        "quantity": "10",
+        "unit_price": "9.75",
+        "amount": "97.50",
+        "sku": "BF-40550"
+      }
+    ],
+    "subtotal": "343.74",
+    "discount": "0.00",
+    "tax": "65.31",
+    "total": "409.05"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0114",
+    "reason_codes": [
+      "PRICE_VARIANCE"
+    ]
+  }
+}

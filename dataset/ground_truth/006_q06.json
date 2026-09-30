@@ -1,0 +1,39 @@
+{
+  "file": "invoices/006_q06.pdf",
+  "case": "q06",
+  "vendor_layout": "quillfeather",
+  "description": "One line amount is off by one cent (rounding)",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10406",
+    "invoice_date": "2026-03-07",
+    "due_date": "2026-04-06",
+    "po_number": "PO-2026-0106",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Copy paper A4 80gsm, ream of 500",
+        "quantity": "15",
+        "unit_price": "6.49",
+        "amount": "97.36",
+        "sku": null
+      },
+      {
+        "description": "Stapler, heavy duty, 100-sheet",
+        "quantity": "3",
+        "unit_price": "34.75",
+        "amount": "104.25",
+        "sku": null
+      }
+    ],
+    "subtotal": "201.61",
+    "discount": "0.00",
+    "tax": "16.63",
+    "total": "218.24"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0106",
+    "reason_codes": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "file": "invoices/005_q05.pdf",
+  "case": "q05",
+  "vendor_layout": "quillfeather",
+  "description": "No PO number printed; PO must be inferred",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10405",
+    "invoice_date": "2026-03-06",
+    "due_date": "2026-04-05",
+    "po_number": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Ballpoint pens, blue, box of 50",
+        "quantity": "6",
+        "unit_price": "11.90",
+        "amount": "71.40",
+        "sku": null
+      },
+      {
+        "description": "Lever arch file, A4, black",
+        "quantity": "40",
+        "unit_price": "4.15",
+        "amount": "166.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "237.40",
+    "discount": "0.00",
+    "tax": "19.59",
+    "total": "256.99"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0105",
+    "reason_codes": [
+      "PO_MISSING"
+    ]
+  }
+}

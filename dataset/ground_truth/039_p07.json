@@ -1,0 +1,32 @@
+{
+  "file": "invoices/039_p07.pdf",
+  "case": "p07",
+  "vendor_layout": "pinecone",
+  "description": "Rate below PO price",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0038",
+    "invoice_date": "2026-04-09",
+    "due_date": "2026-05-09",
+    "po_number": "PO-2026-0133",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Security review and hardening",
+        "quantity": "12",
+        "unit_price": "200.00",
+        "amount": "2400.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "2400.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "total": "2400.00"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0133",
+    "reason_codes": []
+  }
+}

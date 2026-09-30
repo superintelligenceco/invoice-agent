@@ -1,0 +1,41 @@
+{
+  "file": "invoices/037_p05.pdf",
+  "case": "p05",
+  "vendor_layout": "pinecone",
+  "description": "Printed subtotal is 25.00 more than the line amounts",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0036",
+    "invoice_date": "2026-04-07",
+    "due_date": "2026-05-07",
+    "po_number": "PO-2026-0131",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "On-call incident response",
+        "quantity": "12",
+        "unit_price": "160.00",
+        "amount": "1920.00",
+        "sku": null
+      },
+      {
+        "description": "Security review and hardening",
+        "quantity": "8",
+        "unit_price": "210.00",
+        "amount": "1680.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "3625.00",
+    "discount": "180.00",
+    "tax": "0.00",
+    "total": "3445.00"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0131",
+    "reason_codes": [
+      "SUBTOTAL_MISMATCH"
+    ]
+  }
+}

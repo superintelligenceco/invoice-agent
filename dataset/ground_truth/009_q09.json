@@ -1,0 +1,46 @@
+{
+  "file": "invoices/009_q09.pdf",
+  "case": "q09",
+  "vendor_layout": "quillfeather",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10408",
+    "invoice_date": "2026-03-10",
+    "due_date": "2026-04-09",
+    "po_number": "PO-2026-0107",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Staples 26/6, box of 5000",
+        "quantity": "25",
+        "unit_price": "3.20",
+        "amount": "80.00",
+        "sku": null
+      },
+      {
+        "description": "Whiteboard markers, assorted, 4-pack",
+        "quantity": "6",
+        "unit_price": "5.95",
+        "amount": "35.70",
+        "sku": null
+      },
+      {
+        "description": "Desk organiser, mesh, 5 compartments",
+        "quantity": "2",
+        "unit_price": "18.40",
+        "amount": "36.80",
+        "sku": null
+      }
+    ],
+    "subtotal": "152.50",
+    "discount": "0.00",
+    "tax": "12.58",
+    "total": "165.08"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0107",
+    "reason_codes": []
+  }
+}

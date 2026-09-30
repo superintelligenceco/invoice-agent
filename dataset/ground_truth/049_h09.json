@@ -1,0 +1,109 @@
+{
+  "file": "invoices/049_h09.pdf",
+  "case": "h09",
+  "vendor_layout": "harborline",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778109",
+    "invoice_date": "2026-04-19",
+    "due_date": "2026-05-19",
+    "po_number": "PO-2026-0143",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "WIPER BLADE 22IN, TYPE C",
+        "quantity": "24",
+        "unit_price": "34.97",
+        "amount": "839.28",
+        "sku": "HFP-5036"
+      },
+      {
+        "description": "SPARK PLUG, IRIDIUM, TYPE C",
+        "quantity": "23",
+        "unit_price": "41.1",
+        "amount": "945.30",
+        "sku": "HFP-5037"
+      },
+      {
+        "description": "SERPENTINE BELT, TYPE C",
+        "quantity": "12",
+        "unit_price": "48.23",
+        "amount": "578.76",
+        "sku": "HFP-5038"
+      },
+      {
+        "description": "RADIATOR HOSE, UPPER, TYPE C",
+        "quantity": "17",
+        "unit_price": "55.36",
+        "amount": "941.12",
+        "sku": "HFP-5039"
+      },
+      {
+        "description": "HEADLAMP BULB H7, TYPE C",
+        "quantity": "24",
+        "unit_price": "62.49",
+        "amount": "1499.76",
+        "sku": "HFP-5040"
+      },
+      {
+        "description": "CABIN AIR FILTER, TYPE C",
+        "quantity": "3",
+        "unit_price": "69.62",
+        "amount": "208.86",
+        "sku": "HFP-5041"
+      },
+      {
+        "description": "FUEL PUMP RELAY, TYPE C",
+        "quantity": "9",
+        "unit_price": "76.75",
+        "amount": "690.75",
+        "sku": "HFP-5042"
+      },
+      {
+        "description": "WHEEL BEARING HUB, TYPE C",
+        "quantity": "24",
+        "unit_price": "83.88",
+        "amount": "2013.12",
+        "sku": "HFP-5043"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE C",
+        "quantity": "21",
+        "unit_price": "90.01",
+        "amount": "1890.21",
+        "sku": "HFP-5044"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE C",
+        "quantity": "16",
+        "unit_price": "7.14",
+        "amount": "114.24",
+        "sku": "HFP-5045"
+      },
+      {
+        "description": "THERMOSTAT HOUSING, TYPE C",
+        "quantity": "1",
+        "unit_price": "14.27",
+        "amount": "14.27",
+        "sku": "HFP-5046"
+      },
+      {
+        "description": "BELT TENSIONER, TYPE C",
+        "quantity": "5",
+        "unit_price": "21.4",
+        "amount": "107.00",
+        "sku": "HFP-5047"
+      }
+    ],
+    "subtotal": "9842.67",
+    "discount": "0.00",
+    "tax": "688.99",
+    "total": "10531.66"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0143",
+    "reason_codes": []
+  }
+}

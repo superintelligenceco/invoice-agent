@@ -1,0 +1,41 @@
+{
+  "file": "invoices/010_q10.pdf",
+  "case": "q10",
+  "vendor_layout": "quillfeather",
+  "description": "Scanned image with no text layer",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10409",
+    "invoice_date": "2026-03-11",
+    "due_date": "2026-04-10",
+    "po_number": "PO-2026-0108",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Copy paper A4 80gsm, ream of 500",
+        "quantity": "10",
+        "unit_price": "6.49",
+        "amount": "64.90",
+        "sku": null
+      },
+      {
+        "description": "Ballpoint pens, blue, box of 50",
+        "quantity": "2",
+        "unit_price": "11.90",
+        "amount": "23.80",
+        "sku": null
+      }
+    ],
+    "subtotal": "88.70",
+    "discount": "0.00",
+    "tax": "7.32",
+    "total": "96.02"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": null,
+    "reason_codes": [
+      "NO_TEXT_LAYER"
+    ]
+  }
+}

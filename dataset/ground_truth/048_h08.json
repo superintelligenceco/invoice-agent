@@ -1,0 +1,55 @@
+{
+  "file": "invoices/048_h08.pdf",
+  "case": "h08",
+  "vendor_layout": "harborline",
+  "description": "No PO number printed; PO must be inferred",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778108",
+    "invoice_date": "2026-04-18",
+    "due_date": "2026-05-18",
+    "po_number": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "WIPER BLADE 22IN, TYPE A",
+        "quantity": "24",
+        "unit_price": "24.39",
+        "amount": "585.36",
+        "sku": "HFP-5004"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE B",
+        "quantity": "13",
+        "unit_price": "85.72",
+        "amount": "1114.36",
+        "sku": "HFP-5028"
+      },
+      {
+        "description": "BRAKE ROTOR, VENTED, TYPE B",
+        "quantity": "13",
+        "unit_price": "23.24",
+        "amount": "302.12",
+        "sku": "HFP-5032"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE C",
+        "quantity": "18",
+        "unit_price": "7.14",
+        "amount": "128.52",
+        "sku": "HFP-5045"
+      }
+    ],
+    "subtotal": "2130.36",
+    "discount": "0.00",
+    "tax": "149.13",
+    "total": "2279.49"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0142",
+    "reason_codes": [
+      "PO_MISSING"
+    ]
+  }
+}

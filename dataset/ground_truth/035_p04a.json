@@ -1,0 +1,32 @@
+{
+  "file": "invoices/035_p04a.pdf",
+  "case": "p04a",
+  "vendor_layout": "pinecone",
+  "description": "First partial invoice, 40 of 60 hours",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0034",
+    "invoice_date": "2026-04-05",
+    "due_date": "2026-05-05",
+    "po_number": "PO-2026-0130",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Managed Kubernetes support",
+        "quantity": "40",
+        "unit_price": "140.00",
+        "amount": "5600.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "5600.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "total": "5600.00"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0130",
+    "reason_codes": []
+  }
+}

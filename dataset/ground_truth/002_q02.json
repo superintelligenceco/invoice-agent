@@ -1,0 +1,46 @@
+{
+  "file": "invoices/002_q02.pdf",
+  "case": "q02",
+  "vendor_layout": "quillfeather",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10402",
+    "invoice_date": "2026-03-03",
+    "due_date": "2026-04-02",
+    "po_number": "PO-2026-0102",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Stapler, heavy duty, 100-sheet",
+        "quantity": "4",
+        "unit_price": "34.75",
+        "amount": "139.00",
+        "sku": null
+      },
+      {
+        "description": "Lever arch file, A4, black",
+        "quantity": "30",
+        "unit_price": "4.15",
+        "amount": "124.50",
+        "sku": null
+      },
+      {
+        "description": "Sticky notes 76x76mm, 12 pads",
+        "quantity": "12",
+        "unit_price": "8.60",
+        "amount": "103.20",
+        "sku": null
+      }
+    ],
+    "subtotal": "366.70",
+    "discount": "0.00",
+    "tax": "30.25",
+    "total": "396.95"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0102",
+    "reason_codes": []
+  }
+}

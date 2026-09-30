@@ -1,0 +1,41 @@
+{
+  "file": "invoices/038_p06.pdf",
+  "case": "p06",
+  "vendor_layout": "pinecone",
+  "description": "No PO number printed; PO must be inferred",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0037",
+    "invoice_date": "2026-04-08",
+    "due_date": "2026-05-08",
+    "po_number": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Cloud architecture consulting",
+        "quantity": "10",
+        "unit_price": "185.00",
+        "amount": "1850.00",
+        "sku": null
+      },
+      {
+        "description": "On-call incident response",
+        "quantity": "5",
+        "unit_price": "160.00",
+        "amount": "800.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "2650.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "total": "2650.00"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0132",
+    "reason_codes": [
+      "PO_MISSING"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "file": "invoices/003_q03.pdf",
+  "case": "q03",
+  "vendor_layout": "quillfeather",
+  "description": "Partial receipt across two receipts, invoiced quantity equals received",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10403",
+    "invoice_date": "2026-03-04",
+    "due_date": "2026-04-03",
+    "po_number": "PO-2026-0103",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Whiteboard markers, assorted, 4-pack",
+        "quantity": "6",
+        "unit_price": "5.95",
+        "amount": "35.70",
+        "sku": null
+      },
+      {
+        "description": "Desk organiser, mesh, 5 compartments",
+        "quantity": "10",
+        "unit_price": "18.40",
+        "amount": "184.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "219.70",
+    "discount": "0.00",
+    "tax": "18.13",
+    "total": "237.83"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0103",
+    "reason_codes": []
+  }
+}

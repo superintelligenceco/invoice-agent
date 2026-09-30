@@ -1,0 +1,48 @@
+{
+  "file": "invoices/018_b06.pdf",
+  "case": "b06",
+  "vendor_layout": "brightforge",
+  "description": "Duplicate of b01 with the invoice number reformatted",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF 2026-0401",
+    "invoice_date": "2026-03-19",
+    "due_date": "2026-04-18",
+    "po_number": "PO-2026-0111",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Kugellager 6204-2RS / Ball bearing 6204-2RS",
+        "quantity": "40",
+        "unit_price": "4.85",
+        "amount": "194.00",
+        "sku": "BF-40110"
+      },
+      {
+        "description": "Sechskantschraube M8x40 / Hex bolt M8x40 (100)",
+        "quantity": "10",
+        "unit_price": "12.10",
+        "amount": "121.00",
+        "sku": "BF-40330"
+      },
+      {
+        "description": "Druckluftkupplung / Pneumatic coupler 1/4in",
+        "quantity": "12",
+        "unit_price": "9.75",
+        "amount": "117.00",
+        "sku": "BF-40550"
+      }
+    ],
+    "subtotal": "432.00",
+    "discount": "0.00",
+    "tax": "82.08",
+    "total": "514.08"
+  },
+  "expected": {
+    "decision": "reject",
+    "po_number": "PO-2026-0111",
+    "reason_codes": [
+      "DUPLICATE_INVOICE"
+    ]
+  }
+}

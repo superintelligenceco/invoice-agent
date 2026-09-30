@@ -1,0 +1,235 @@
+{
+  "file": "invoices/041_h01.pdf",
+  "case": "h01",
+  "vendor_layout": "harborline",
+  "description": "Two-page invoice, 30 lines",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778101",
+    "invoice_date": "2026-04-11",
+    "due_date": "2026-05-11",
+    "po_number": "PO-2026-0135",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE A",
+        "quantity": "1",
+        "unit_price": "3",
+        "amount": "3.00",
+        "sku": "HFP-5001"
+      },
+      {
+        "description": "OIL FILTER, TYPE A",
+        "quantity": "1",
+        "unit_price": "10.13",
+        "amount": "10.13",
+        "sku": "HFP-5002"
+      },
+      {
+        "description": "AIR FILTER ELEMENT, TYPE A",
+        "quantity": "19",
+        "unit_price": "17.26",
+        "amount": "327.94",
+        "sku": "HFP-5003"
+      },
+      {
+        "description": "WIPER BLADE 22IN, TYPE A",
+        "quantity": "9",
+        "unit_price": "24.39",
+        "amount": "219.51",
+        "sku": "HFP-5004"
+      },
+      {
+        "description": "SPARK PLUG, IRIDIUM, TYPE A",
+        "quantity": "23",
+        "unit_price": "31.52",
+        "amount": "724.96",
+        "sku": "HFP-5005"
+      },
+      {
+        "description": "SERPENTINE BELT, TYPE A",
+        "quantity": "1",
+        "unit_price": "38.65",
+        "amount": "38.65",
+        "sku": "HFP-5006"
+      },
+      {
+        "description": "RADIATOR HOSE, UPPER, TYPE A",
+        "quantity": "15",
+        "unit_price": "45.78",
+        "amount": "686.70",
+        "sku": "HFP-5007"
+      },
+      {
+        "description": "HEADLAMP BULB H7, TYPE A",
+        "quantity": "3",
+        "unit_price": "52.91",
+        "amount": "158.73",
+        "sku": "HFP-5008"
+      },
+      {
+        "description": "CABIN AIR FILTER, TYPE A",
+        "quantity": "5",
+        "unit_price": "59.04",
+        "amount": "295.20",
+        "sku": "HFP-5009"
+      },
+      {
+        "description": "FUEL PUMP RELAY, TYPE A",
+        "quantity": "3",
+        "unit_price": "66.17",
+        "amount": "198.51",
+        "sku": "HFP-5010"
+      },
+      {
+        "description": "WHEEL BEARING HUB, TYPE A",
+        "quantity": "20",
+        "unit_price": "73.3",
+        "amount": "1466.00",
+        "sku": "HFP-5011"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE A",
+        "quantity": "14",
+        "unit_price": "80.43",
+        "amount": "1126.02",
+        "sku": "HFP-5012"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE A",
+        "quantity": "2",
+        "unit_price": "87.56",
+        "amount": "175.12",
+        "sku": "HFP-5013"
+      },
+      {
+        "description": "THERMOSTAT HOUSING, TYPE A",
+        "quantity": "19",
+        "unit_price": "4.69",
+        "amount": "89.11",
+        "sku": "HFP-5014"
+      },
+      {
+        "description": "BELT TENSIONER, TYPE A",
+        "quantity": "14",
+        "unit_price": "11.82",
+        "amount": "165.48",
+        "sku": "HFP-5015"
+      },
+      {
+        "description": "BRAKE ROTOR, VENTED, TYPE A",
+        "quantity": "9",
+        "unit_price": "18.95",
+        "amount": "170.55",
+        "sku": "HFP-5016"
+      },
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE B",
+        "quantity": "8",
+        "unit_price": "8.29",
+        "amount": "66.32",
+        "sku": "HFP-5017"
+      },
+      {
+        "description": "OIL FILTER, TYPE B",
+        "quantity": "11",
+        "unit_price": "15.42",
+        "amount": "169.62",
+        "sku": "HFP-5018"
+      },
+      {
+        "description": "AIR FILTER ELEMENT, TYPE B",
+        "quantity": "7",
+        "unit_price": "22.55",
+        "amount": "157.85",
+        "sku": "HFP-5019"
+      },
+      {
+        "description": "WIPER BLADE 22IN, TYPE B",
+        "quantity": "21",
+        "unit_price": "29.68",
+        "amount": "623.28",
+        "sku": "HFP-5020"
+      },
+      {
+        "description": "SPARK PLUG, IRIDIUM, TYPE B",
+        "quantity": "19",
+        "unit_price": "36.81",
+        "amount": "699.39",
+        "sku": "HFP-5021"
+      },
+      {
+        "description": "SERPENTINE BELT, TYPE B",
+        "quantity": "18",
+        "unit_price": "43.94",
+        "amount": "790.92",
+        "sku": "HFP-5022"
+      },
+      {
+        "description": "RADIATOR HOSE, UPPER, TYPE B",
+        "quantity": "17",
+        "unit_price": "50.07",
+        "amount": "851.19",
+        "sku": "HFP-5023"
+      },
+      {
+        "description": "HEADLAMP BULB H7, TYPE B",
+        "quantity": "18",
+        "unit_price": "57.2",
+        "amount": "1029.60",
+        "sku": "HFP-5024"
+      },
+      {
+        "description": "CABIN AIR FILTER, TYPE B",
+        "quantity": "21",
+        "unit_price": "64.33",
+        "amount": "1350.93",
+        "sku": "HFP-5025"
+      },
+      {
+        "description": "FUEL PUMP RELAY, TYPE B",
+        "quantity": "15",
+        "unit_price": "71.46",
+        "amount": "1071.90",
+        "sku": "HFP-5026"
+      },
+      {
+        "description": "WHEEL BEARING HUB, TYPE B",
+        "quantity": "4",
+        "unit_price": "78.59",
+        "amount": "314.36",
+        "sku": "HFP-5027"
+      },
+      {
+        "description": "TIE ROD END, OUTER, TYPE B",
+        "quantity": "10",
+        "unit_price": "85.72",
+        "amount": "857.20",
+        "sku": "HFP-5028"
+      },
+      {
+        "description": "BALL JOINT, LOWER, TYPE B",
+        "quantity": "12",
+        "unit_price": "92.85",
+        "amount": "1114.20",
+        "sku": "HFP-5029"
+      },
+      {
+        "description": "THERMOSTAT HOUSING, TYPE B",
+        "quantity": "5",
+        "unit_price": "9.98",
+        "amount": "49.90",
+        "sku": "HFP-5030"
+      }
+    ],
+    "subtotal": "15002.27",
+    "discount": "0.00",
+    "tax": "1050.16",
+    "total": "16052.43"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0135",
+    "reason_codes": []
+  }
+}

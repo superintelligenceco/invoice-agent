@@ -1,0 +1,32 @@
+{
+  "file": "invoices/021_b09.pdf",
+  "case": "b09",
+  "vendor_layout": "brightforge",
+  "description": "Clean single line",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0408",
+    "invoice_date": "2026-03-22",
+    "due_date": "2026-04-21",
+    "po_number": "PO-2026-0118",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Druckluftkupplung / Pneumatic coupler 1/4in",
+        "quantity": "30",
+        "unit_price": "9.75",
+        "amount": "292.50",
+        "sku": "BF-40550"
+      }
+    ],
+    "subtotal": "292.50",
+    "discount": "0.00",
+    "tax": "55.58",
+    "total": "348.08"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0118",
+    "reason_codes": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "file": "invoices/008_q08.pdf",
+  "case": "q08",
+  "vendor_layout": "quillfeather",
+  "description": "Invoice cites a PO issued to a different vendor",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10407",
+    "invoice_date": "2026-03-09",
+    "due_date": "2026-04-08",
+    "po_number": "PO-2026-0144",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Copy paper A4 80gsm, ream of 500",
+        "quantity": "3",
+        "unit_price": "6.49",
+        "amount": "19.47",
+        "sku": null
+      },
+      {
+        "description": "Lever arch file, A4, black",
+        "quantity": "2",
+        "unit_price": "4.15",
+        "amount": "8.30",
+        "sku": null
+      }
+    ],
+    "subtotal": "27.77",
+    "discount": "0.00",
+    "tax": "2.29",
+    "total": "30.06"
+  },
+  "expected": {
+    "decision": "reject",
+    "po_number": "PO-2026-0144",
+    "reason_codes": [
+      "VENDOR_MISMATCH"
+    ]
+  }
+}

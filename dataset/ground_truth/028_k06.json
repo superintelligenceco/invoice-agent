@@ -1,0 +1,34 @@
+{
+  "file": "invoices/028_k06.pdf",
+  "case": "k06",
+  "vendor_layout": "kettleby",
+  "description": "Cites a PO number that does not exist",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00876",
+    "invoice_date": "2026-03-29",
+    "due_date": "2026-04-28",
+    "po_number": "PO-2026-0999",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Nitrile examination gloves, powder-free, size M, box of 100",
+        "quantity": "2",
+        "unit_price": "7.45",
+        "amount": "14.90",
+        "sku": "KLC-2201"
+      }
+    ],
+    "subtotal": "14.90",
+    "discount": "0.00",
+    "tax": "2.98",
+    "total": "17.88"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": null,
+    "reason_codes": [
+      "PO_NOT_FOUND"
+    ]
+  }
+}

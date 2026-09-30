@@ -1,0 +1,60 @@
+{
+  "file": "invoices/031_k09.pdf",
+  "case": "k09",
+  "vendor_layout": "kettleby",
+  "description": "Clean five-line invoice",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00879",
+    "invoice_date": "2026-04-01",
+    "due_date": "2026-05-01",
+    "po_number": "PO-2026-0126",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Nitrile examination gloves, powder-free, size M, box of 100",
+        "quantity": "20",
+        "unit_price": "7.45",
+        "amount": "149.00",
+        "sku": "KLC-2201"
+      },
+      {
+        "description": "Serological pipettes, 10 mL, sterile, individually wrapped, case of 200",
+        "quantity": "1",
+        "unit_price": "48.90",
+        "amount": "48.90",
+        "sku": "KLC-2202"
+      },
+      {
+        "description": "Microcentrifuge tubes 1.5 mL, natural, bag of 500",
+        "quantity": "2",
+        "unit_price": "12.25",
+        "amount": "24.50",
+        "sku": "KLC-2203"
+      },
+      {
+        "description": "Petri dishes 90 mm, vented, sleeve of 20",
+        "quantity": "3",
+        "unit_price": "6.80",
+        "amount": "20.40",
+        "sku": "KLC-2204"
+      },
+      {
+        "description": "Pipette tips 200 uL, racked, pack of 960",
+        "quantity": "1",
+        "unit_price": "39.50",
+        "amount": "39.50",
+        "sku": "KLC-2205"
+      }
+    ],
+    "subtotal": "282.30",
+    "discount": "0.00",
+    "tax": "56.46",
+    "total": "338.76"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0126",
+    "reason_codes": []
+  }
+}

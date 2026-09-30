@@ -1,0 +1,48 @@
+{
+  "file": "invoices/025_k03.pdf",
+  "case": "k03",
+  "vendor_layout": "kettleby",
+  "description": "Adds a surcharge line that is not on the PO",
+  "invoice": {
+    "vendor": "Kettleby Lab Consumables Ltd",
+    "invoice_number": "KLC-INV-00873",
+    "invoice_date": "2026-03-26",
+    "due_date": "2026-04-25",
+    "po_number": "PO-2026-0122",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Lab coat, polycotton, size L",
+        "quantity": "6",
+        "unit_price": "21.00",
+        "amount": "126.00",
+        "sku": "KLC-2206"
+      },
+      {
+        "description": "Nitrile examination gloves, powder-free, size M, box of 100",
+        "quantity": "5",
+        "unit_price": "7.45",
+        "amount": "37.25",
+        "sku": "KLC-2201"
+      },
+      {
+        "description": "Hazardous goods handling surcharge",
+        "quantity": "1",
+        "unit_price": "15.00",
+        "amount": "15.00",
+        "sku": "KLC-SUR1"
+      }
+    ],
+    "subtotal": "178.25",
+    "discount": "0.00",
+    "tax": "35.65",
+    "total": "213.90"
+  },
+  "expected": {
+    "decision": "needs_review",
+    "po_number": "PO-2026-0122",
+    "reason_codes": [
+      "LINE_NOT_ON_PO"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "file": "invoices/020_b08.pdf",
+  "case": "b08",
+  "vendor_layout": "brightforge",
+  "description": "Clean six-line invoice",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0407",
+    "invoice_date": "2026-03-21",
+    "due_date": "2026-04-20",
+    "po_number": "PO-2026-0117",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Kugellager 6204-2RS / Ball bearing 6204-2RS",
+        "quantity": "24",
+        "unit_price": "4.85",
+        "amount": "116.40",
+        "sku": "BF-40110"
+      },
+      {
+        "description": "Hydraulikschlauch DN10 1m / Hydraulic hose DN10",
+        "quantity": "2",
+        "unit_price": "23.40",
+        "amount": "46.80",
+        "sku": "BF-40220"
+      },
+      {
+        "description": "Sechskantschraube M8x40 / Hex bolt M8x40 (100)",
+        "quantity": "5",
+        "unit_price": "12.10",
+        "amount": "60.50",
+        "sku": "BF-40330"
+      },
+      {
+        "description": "Zahnriemen HTD 8M / Timing belt HTD 8M",
+        "quantity": "1",
+        "unit_price": "57.00",
+        "amount": "57.00",
+        "sku": "BF-40440"
+      },
+      {
+        "description": "Druckluftkupplung / Pneumatic coupler 1/4in",
+        "quantity": "6",
+        "unit_price": "9.75",
+        "amount": "58.50",
+        "sku": "BF-40550"
+      },
+      {
+        "description": "Industriefett 1kg / Industrial grease 1kg",
+        "quantity": "2",
+        "unit_price": "15.30",
+        "amount": "30.60",
+        "sku": "BF-40660"
+      }
+    ],
+    "subtotal": "369.80",
+    "discount": "0.00",
+    "tax": "70.26",
+    "total": "440.06"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0117",
+    "reason_codes": []
+  }
+}

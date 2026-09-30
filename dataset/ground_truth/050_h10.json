@@ -1,0 +1,46 @@
+{
+  "file": "invoices/050_h10.pdf",
+  "case": "h10",
+  "vendor_layout": "harborline",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Harborline Fleet Parts LLC",
+    "invoice_number": "HFP 778110",
+    "invoice_date": "2026-04-20",
+    "due_date": "2026-05-20",
+    "po_number": "PO-2026-0144",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE A",
+        "quantity": "2",
+        "unit_price": "3",
+        "amount": "6.00",
+        "sku": "HFP-5001"
+      },
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE B",
+        "quantity": "22",
+        "unit_price": "8.29",
+        "amount": "182.38",
+        "sku": "HFP-5017"
+      },
+      {
+        "description": "BRAKE PAD SET, FRONT, TYPE C",
+        "quantity": "21",
+        "unit_price": "13.58",
+        "amount": "285.18",
+        "sku": "HFP-5033"
+      }
+    ],
+    "subtotal": "473.56",
+    "discount": "0.00",
+    "tax": "33.15",
+    "total": "506.71"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0144",
+    "reason_codes": []
+  }
+}

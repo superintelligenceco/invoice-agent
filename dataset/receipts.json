@@ -1,0 +1,1154 @@
+[
+  {
+    "receipt_id": "GR-00001",
+    "po_number": "PO-2026-0101",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "20"
+      },
+      {
+        "line_no": 2,
+        "quantity": "5"
+      },
+      {
+        "line_no": 3,
+        "quantity": "10"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00002",
+    "po_number": "PO-2026-0102",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "4"
+      },
+      {
+        "line_no": 2,
+        "quantity": "30"
+      },
+      {
+        "line_no": 3,
+        "quantity": "12"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00003",
+    "po_number": "PO-2026-0103",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "4"
+      },
+      {
+        "line_no": 2,
+        "quantity": "10"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00004",
+    "po_number": "PO-2026-0103",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00005",
+    "po_number": "PO-2026-0104",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "30"
+      },
+      {
+        "line_no": 2,
+        "quantity": "8"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00006",
+    "po_number": "PO-2026-0105",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "6"
+      },
+      {
+        "line_no": 2,
+        "quantity": "40"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00007",
+    "po_number": "PO-2026-0106",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "15"
+      },
+      {
+        "line_no": 2,
+        "quantity": "3"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00008",
+    "po_number": "PO-2026-0107",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "25"
+      },
+      {
+        "line_no": 2,
+        "quantity": "6"
+      },
+      {
+        "line_no": 3,
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00009",
+    "po_number": "PO-2026-0108",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "10"
+      },
+      {
+        "line_no": 2,
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00010",
+    "po_number": "PO-2026-0109",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "12"
+      },
+      {
+        "line_no": 2,
+        "quantity": "6"
+      },
+      {
+        "line_no": 3,
+        "quantity": "4"
+      },
+      {
+        "line_no": 4,
+        "quantity": "1"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00011",
+    "po_number": "PO-2026-0110",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "5"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00012",
+    "po_number": "PO-2026-0111",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "40"
+      },
+      {
+        "line_no": 2,
+        "quantity": "10"
+      },
+      {
+        "line_no": 3,
+        "quantity": "12"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00013",
+    "po_number": "PO-2026-0112",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "6"
+      },
+      {
+        "line_no": 2,
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00014",
+    "po_number": "PO-2026-0113",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "20"
+      },
+      {
+        "line_no": 2,
+        "quantity": "100"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00015",
+    "po_number": "PO-2026-0114",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "4"
+      },
+      {
+        "line_no": 2,
+        "quantity": "10"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00016",
+    "po_number": "PO-2026-0115",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "20"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00017",
+    "po_number": "PO-2026-0116",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "4"
+      },
+      {
+        "line_no": 2,
+        "quantity": "3"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00018",
+    "po_number": "PO-2026-0117",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "24"
+      },
+      {
+        "line_no": 2,
+        "quantity": "2"
+      },
+      {
+        "line_no": 3,
+        "quantity": "5"
+      },
+      {
+        "line_no": 4,
+        "quantity": "1"
+      },
+      {
+        "line_no": 5,
+        "quantity": "6"
+      },
+      {
+        "line_no": 6,
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00019",
+    "po_number": "PO-2026-0118",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "30"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00020",
+    "po_number": "PO-2026-0119",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "8"
+      },
+      {
+        "line_no": 2,
+        "quantity": "8"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00021",
+    "po_number": "PO-2026-0120",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "10"
+      },
+      {
+        "line_no": 2,
+        "quantity": "4"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00022",
+    "po_number": "PO-2026-0121",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "3"
+      },
+      {
+        "line_no": 2,
+        "quantity": "2"
+      },
+      {
+        "line_no": 3,
+        "quantity": "10"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00023",
+    "po_number": "PO-2026-0122",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "6"
+      },
+      {
+        "line_no": 2,
+        "quantity": "5"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00024",
+    "po_number": "PO-2026-0123",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "6"
+      },
+      {
+        "line_no": 2,
+        "quantity": "5"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00025",
+    "po_number": "PO-2026-0124",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "3"
+      },
+      {
+        "line_no": 2,
+        "quantity": "2"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00026",
+    "po_number": "PO-2026-0125",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "2"
+      },
+      {
+        "line_no": 2,
+        "quantity": "4"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00027",
+    "po_number": "PO-2026-0126",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "20"
+      },
+      {
+        "line_no": 2,
+        "quantity": "1"
+      },
+      {
+        "line_no": 3,
+        "quantity": "2"
+      },
+      {
+        "line_no": 4,
+        "quantity": "3"
+      },
+      {
+        "line_no": 5,
+        "quantity": "1"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00028",
+    "po_number": "PO-2026-0135",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "1"
+      },
+      {
+        "line_no": 2,
+        "quantity": "1"
+      },
+      {
+        "line_no": 3,
+        "quantity": "19"
+      },
+      {
+        "line_no": 4,
+        "quantity": "9"
+      },
+      {
+        "line_no": 5,
+        "quantity": "23"
+      },
+      {
+        "line_no": 6,
+        "quantity": "1"
+      },
+      {
+        "line_no": 7,
+        "quantity": "15"
+      },
+      {
+        "line_no": 8,
+        "quantity": "3"
+      },
+      {
+        "line_no": 9,
+        "quantity": "5"
+      },
+      {
+        "line_no": 10,
+        "quantity": "3"
+      },
+      {
+        "line_no": 11,
+        "quantity": "20"
+      },
+      {
+        "line_no": 12,
+        "quantity": "14"
+      },
+      {
+        "line_no": 13,
+        "quantity": "2"
+      },
+      {
+        "line_no": 14,
+        "quantity": "19"
+      },
+      {
+        "line_no": 15,
+        "quantity": "14"
+      },
+      {
+        "line_no": 16,
+        "quantity": "9"
+      },
+      {
+        "line_no": 17,
+        "quantity": "8"
+      },
+      {
+        "line_no": 18,
+        "quantity": "11"
+      },
+      {
+        "line_no": 19,
+        "quantity": "7"
+      },
+      {
+        "line_no": 20,
+        "quantity": "21"
+      },
+      {
+        "line_no": 21,
+        "quantity": "19"
+      },
+      {
+        "line_no": 22,
+        "quantity": "18"
+      },
+      {
+        "line_no": 23,
+        "quantity": "17"
+      },
+      {
+        "line_no": 24,
+        "quantity": "18"
+      },
+      {
+        "line_no": 25,
+        "quantity": "21"
+      },
+      {
+        "line_no": 26,
+        "quantity": "15"
+      },
+      {
+        "line_no": 27,
+        "quantity": "4"
+      },
+      {
+        "line_no": 28,
+        "quantity": "10"
+      },
+      {
+        "line_no": 29,
+        "quantity": "12"
+      },
+      {
+        "line_no": 30,
+        "quantity": "5"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00029",
+    "po_number": "PO-2026-0136",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "7"
+      },
+      {
+        "line_no": 2,
+        "quantity": "19"
+      },
+      {
+        "line_no": 3,
+        "quantity": "1"
+      },
+      {
+        "line_no": 4,
+        "quantity": "22"
+      },
+      {
+        "line_no": 5,
+        "quantity": "10"
+      },
+      {
+        "line_no": 6,
+        "quantity": "3"
+      },
+      {
+        "line_no": 7,
+        "quantity": "9"
+      },
+      {
+        "line_no": 8,
+        "quantity": "8"
+      },
+      {
+        "line_no": 9,
+        "quantity": "15"
+      },
+      {
+        "line_no": 10,
+        "quantity": "14"
+      },
+      {
+        "line_no": 11,
+        "quantity": "23"
+      },
+      {
+        "line_no": 12,
+        "quantity": "13"
+      },
+      {
+        "line_no": 13,
+        "quantity": "21"
+      },
+      {
+        "line_no": 14,
+        "quantity": "24"
+      },
+      {
+        "line_no": 15,
+        "quantity": "11"
+      },
+      {
+        "line_no": 16,
+        "quantity": "11"
+      },
+      {
+        "line_no": 17,
+        "quantity": "14"
+      },
+      {
+        "line_no": 18,
+        "quantity": "5"
+      },
+      {
+        "line_no": 19,
+        "quantity": "1"
+      },
+      {
+        "line_no": 20,
+        "quantity": "17"
+      },
+      {
+        "line_no": 21,
+        "quantity": "5"
+      },
+      {
+        "line_no": 22,
+        "quantity": "10"
+      },
+      {
+        "line_no": 23,
+        "quantity": "5"
+      },
+      {
+        "line_no": 24,
+        "quantity": "10"
+      },
+      {
+        "line_no": 25,
+        "quantity": "2"
+      },
+      {
+        "line_no": 26,
+        "quantity": "18"
+      },
+      {
+        "line_no": 27,
+        "quantity": "17"
+      },
+      {
+        "line_no": 28,
+        "quantity": "8"
+      },
+      {
+        "line_no": 29,
+        "quantity": "2"
+      },
+      {
+        "line_no": 30,
+        "quantity": "14"
+      },
+      {
+        "line_no": 31,
+        "quantity": "5"
+      },
+      {
+        "line_no": 32,
+        "quantity": "10"
+      },
+      {
+        "line_no": 33,
+        "quantity": "11"
+      },
+      {
+        "line_no": 34,
+        "quantity": "19"
+      },
+      {
+        "line_no": 35,
+        "quantity": "14"
+      },
+      {
+        "line_no": 36,
+        "quantity": "17"
+      },
+      {
+        "line_no": 37,
+        "quantity": "5"
+      },
+      {
+        "line_no": 38,
+        "quantity": "24"
+      },
+      {
+        "line_no": 39,
+        "quantity": "12"
+      },
+      {
+        "line_no": 40,
+        "quantity": "19"
+      },
+      {
+        "line_no": 41,
+        "quantity": "5"
+      },
+      {
+        "line_no": 42,
+        "quantity": "14"
+      },
+      {
+        "line_no": 43,
+        "quantity": "2"
+      },
+      {
+        "line_no": 44,
+        "quantity": "4"
+      },
+      {
+        "line_no": 45,
+        "quantity": "23"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00030",
+    "po_number": "PO-2026-0137",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "6"
+      },
+      {
+        "line_no": 2,
+        "quantity": "24"
+      },
+      {
+        "line_no": 3,
+        "quantity": "22"
+      },
+      {
+        "line_no": 4,
+        "quantity": "18"
+      },
+      {
+        "line_no": 5,
+        "quantity": "24"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00031",
+    "po_number": "PO-2026-0138",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "8"
+      },
+      {
+        "line_no": 2,
+        "quantity": "16"
+      },
+      {
+        "line_no": 3,
+        "quantity": "12"
+      },
+      {
+        "line_no": 4,
+        "quantity": "13"
+      },
+      {
+        "line_no": 5,
+        "quantity": "16"
+      },
+      {
+        "line_no": 6,
+        "quantity": "16"
+      },
+      {
+        "line_no": 7,
+        "quantity": "1"
+      },
+      {
+        "line_no": 8,
+        "quantity": "17"
+      },
+      {
+        "line_no": 9,
+        "quantity": "3"
+      },
+      {
+        "line_no": 10,
+        "quantity": "7"
+      },
+      {
+        "line_no": 11,
+        "quantity": "3"
+      },
+      {
+        "line_no": 12,
+        "quantity": "20"
+      },
+      {
+        "line_no": 13,
+        "quantity": "13"
+      },
+      {
+        "line_no": 14,
+        "quantity": "20"
+      },
+      {
+        "line_no": 15,
+        "quantity": "19"
+      },
+      {
+        "line_no": 16,
+        "quantity": "23"
+      },
+      {
+        "line_no": 17,
+        "quantity": "23"
+      },
+      {
+        "line_no": 18,
+        "quantity": "13"
+      },
+      {
+        "line_no": 19,
+        "quantity": "3"
+      },
+      {
+        "line_no": 20,
+        "quantity": "18"
+      },
+      {
+        "line_no": 21,
+        "quantity": "6"
+      },
+      {
+        "line_no": 22,
+        "quantity": "17"
+      },
+      {
+        "line_no": 23,
+        "quantity": "23"
+      },
+      {
+        "line_no": 24,
+        "quantity": "5"
+      },
+      {
+        "line_no": 25,
+        "quantity": "2"
+      },
+      {
+        "line_no": 26,
+        "quantity": "22"
+      },
+      {
+        "line_no": 27,
+        "quantity": "10"
+      },
+      {
+        "line_no": 28,
+        "quantity": "8"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00032",
+    "po_number": "PO-2026-0139",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "16"
+      },
+      {
+        "line_no": 2,
+        "quantity": "7"
+      },
+      {
+        "line_no": 3,
+        "quantity": "12"
+      },
+      {
+        "line_no": 4,
+        "quantity": "21"
+      },
+      {
+        "line_no": 5,
+        "quantity": "10"
+      },
+      {
+        "line_no": 6,
+        "quantity": "5"
+      },
+      {
+        "line_no": 7,
+        "quantity": "3"
+      },
+      {
+        "line_no": 8,
+        "quantity": "23"
+      },
+      {
+        "line_no": 9,
+        "quantity": "6"
+      },
+      {
+        "line_no": 10,
+        "quantity": "6"
+      },
+      {
+        "line_no": 11,
+        "quantity": "13"
+      },
+      {
+        "line_no": 12,
+        "quantity": "17"
+      },
+      {
+        "line_no": 13,
+        "quantity": "21"
+      },
+      {
+        "line_no": 14,
+        "quantity": "23"
+      },
+      {
+        "line_no": 15,
+        "quantity": "1"
+      },
+      {
+        "line_no": 16,
+        "quantity": "8"
+      },
+      {
+        "line_no": 17,
+        "quantity": "3"
+      },
+      {
+        "line_no": 18,
+        "quantity": "3"
+      },
+      {
+        "line_no": 19,
+        "quantity": "16"
+      },
+      {
+        "line_no": 20,
+        "quantity": "3"
+      },
+      {
+        "line_no": 21,
+        "quantity": "4"
+      },
+      {
+        "line_no": 22,
+        "quantity": "10"
+      },
+      {
+        "line_no": 23,
+        "quantity": "19"
+      },
+      {
+        "line_no": 24,
+        "quantity": "5"
+      },
+      {
+        "line_no": 25,
+        "quantity": "22"
+      },
+      {
+        "line_no": 26,
+        "quantity": "16"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00033",
+    "po_number": "PO-2026-0141",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "19"
+      },
+      {
+        "line_no": 2,
+        "quantity": "7"
+      },
+      {
+        "line_no": 3,
+        "quantity": "21"
+      },
+      {
+        "line_no": 4,
+        "quantity": "1"
+      },
+      {
+        "line_no": 5,
+        "quantity": "13"
+      },
+      {
+        "line_no": 6,
+        "quantity": "3"
+      },
+      {
+        "line_no": 7,
+        "quantity": "13"
+      },
+      {
+        "line_no": 8,
+        "quantity": "4"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00034",
+    "po_number": "PO-2026-0142",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "24"
+      },
+      {
+        "line_no": 2,
+        "quantity": "13"
+      },
+      {
+        "line_no": 3,
+        "quantity": "13"
+      },
+      {
+        "line_no": 4,
+        "quantity": "18"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00035",
+    "po_number": "PO-2026-0143",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "24"
+      },
+      {
+        "line_no": 2,
+        "quantity": "23"
+      },
+      {
+        "line_no": 3,
+        "quantity": "12"
+      },
+      {
+        "line_no": 4,
+        "quantity": "17"
+      },
+      {
+        "line_no": 5,
+        "quantity": "24"
+      },
+      {
+        "line_no": 6,
+        "quantity": "3"
+      },
+      {
+        "line_no": 7,
+        "quantity": "9"
+      },
+      {
+        "line_no": 8,
+        "quantity": "24"
+      },
+      {
+        "line_no": 9,
+        "quantity": "21"
+      },
+      {
+        "line_no": 10,
+        "quantity": "16"
+      },
+      {
+        "line_no": 11,
+        "quantity": "1"
+      },
+      {
+        "line_no": 12,
+        "quantity": "5"
+      }
+    ]
+  },
+  {
+    "receipt_id": "GR-00036",
+    "po_number": "PO-2026-0144",
+    "date": "2026-02-27",
+    "lines": [
+      {
+        "line_no": 1,
+        "quantity": "2"
+      },
+      {
+        "line_no": 2,
+        "quantity": "22"
+      },
+      {
+        "line_no": 3,
+        "quantity": "21"
+      }
+    ]
+  }
+]

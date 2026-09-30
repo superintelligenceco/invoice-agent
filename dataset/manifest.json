@@ -1,0 +1,302 @@
+[
+  {
+    "file": "invoices/001_q01.pdf",
+    "case": "q01",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/002_q02.pdf",
+    "case": "q02",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/003_q03.pdf",
+    "case": "q03",
+    "expected_decision": "auto_approve",
+    "description": "Partial receipt across two receipts, invoiced quantity equals received"
+  },
+  {
+    "file": "invoices/004_q04.pdf",
+    "case": "q04",
+    "expected_decision": "needs_review",
+    "description": "Billed for 50 units, only 30 received"
+  },
+  {
+    "file": "invoices/005_q05.pdf",
+    "case": "q05",
+    "expected_decision": "needs_review",
+    "description": "No PO number printed; PO must be inferred"
+  },
+  {
+    "file": "invoices/006_q06.pdf",
+    "case": "q06",
+    "expected_decision": "auto_approve",
+    "description": "One line amount is off by one cent (rounding)"
+  },
+  {
+    "file": "invoices/007_q07.pdf",
+    "case": "q07",
+    "expected_decision": "reject",
+    "description": "Exact duplicate submission of q01"
+  },
+  {
+    "file": "invoices/008_q08.pdf",
+    "case": "q08",
+    "expected_decision": "reject",
+    "description": "Invoice cites a PO issued to a different vendor"
+  },
+  {
+    "file": "invoices/009_q09.pdf",
+    "case": "q09",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/010_q10.pdf",
+    "case": "q10",
+    "expected_decision": "needs_review",
+    "description": "Scanned image with no text layer"
+  },
+  {
+    "file": "invoices/011_q11.pdf",
+    "case": "q11",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/012_q12.pdf",
+    "case": "q12",
+    "expected_decision": "auto_approve",
+    "description": "Clean single line"
+  },
+  {
+    "file": "invoices/013_b01.pdf",
+    "case": "b01",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match, European number format"
+  },
+  {
+    "file": "invoices/014_b02.pdf",
+    "case": "b02",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/015_b03.pdf",
+    "case": "b03",
+    "expected_decision": "auto_approve",
+    "description": "Unit price 1% above PO, inside tolerance"
+  },
+  {
+    "file": "invoices/016_b04.pdf",
+    "case": "b04",
+    "expected_decision": "needs_review",
+    "description": "Unit price 8% above PO"
+  },
+  {
+    "file": "invoices/017_b05.pdf",
+    "case": "b05",
+    "expected_decision": "reject",
+    "description": "Billed 25 units against a PO for 20"
+  },
+  {
+    "file": "invoices/018_b06.pdf",
+    "case": "b06",
+    "expected_decision": "reject",
+    "description": "Duplicate of b01 with the invoice number reformatted"
+  },
+  {
+    "file": "invoices/019_b07.pdf",
+    "case": "b07",
+    "expected_decision": "needs_review",
+    "description": "Billed in USD against a EUR purchase order"
+  },
+  {
+    "file": "invoices/020_b08.pdf",
+    "case": "b08",
+    "expected_decision": "auto_approve",
+    "description": "Clean six-line invoice"
+  },
+  {
+    "file": "invoices/021_b09.pdf",
+    "case": "b09",
+    "expected_decision": "auto_approve",
+    "description": "Clean single line"
+  },
+  {
+    "file": "invoices/022_b10.pdf",
+    "case": "b10",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/023_k01.pdf",
+    "case": "k01",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/024_k02.pdf",
+    "case": "k02",
+    "expected_decision": "auto_approve",
+    "description": "Long descriptions wrap onto two lines"
+  },
+  {
+    "file": "invoices/025_k03.pdf",
+    "case": "k03",
+    "expected_decision": "needs_review",
+    "description": "Adds a surcharge line that is not on the PO"
+  },
+  {
+    "file": "invoices/026_k04.pdf",
+    "case": "k04",
+    "expected_decision": "needs_review",
+    "description": "Printed total is 10.00 higher than subtotal plus VAT"
+  },
+  {
+    "file": "invoices/027_k05.pdf",
+    "case": "k05",
+    "expected_decision": "auto_approve",
+    "description": "Partial receipt, invoiced quantity equals received"
+  },
+  {
+    "file": "invoices/028_k06.pdf",
+    "case": "k06",
+    "expected_decision": "needs_review",
+    "description": "Cites a PO number that does not exist"
+  },
+  {
+    "file": "invoices/029_k07.pdf",
+    "case": "k07",
+    "expected_decision": "reject",
+    "description": "Resubmission of k01 under a new invoice number"
+  },
+  {
+    "file": "invoices/030_k08.pdf",
+    "case": "k08",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/031_k09.pdf",
+    "case": "k09",
+    "expected_decision": "auto_approve",
+    "description": "Clean five-line invoice"
+  },
+  {
+    "file": "invoices/032_p01.pdf",
+    "case": "p01",
+    "expected_decision": "auto_approve",
+    "description": "Clean 2-way match (services)"
+  },
+  {
+    "file": "invoices/033_p02.pdf",
+    "case": "p02",
+    "expected_decision": "auto_approve",
+    "description": "5% invoice-level discount"
+  },
+  {
+    "file": "invoices/034_p03.pdf",
+    "case": "p03",
+    "expected_decision": "reject",
+    "description": "20 hours billed against 16 ordered"
+  },
+  {
+    "file": "invoices/035_p04a.pdf",
+    "case": "p04a",
+    "expected_decision": "auto_approve",
+    "description": "First partial invoice, 40 of 60 hours"
+  },
+  {
+    "file": "invoices/036_p04b.pdf",
+    "case": "p04b",
+    "expected_decision": "reject",
+    "description": "Second invoice pushes the PO to 70 of 60 hours"
+  },
+  {
+    "file": "invoices/037_p05.pdf",
+    "case": "p05",
+    "expected_decision": "needs_review",
+    "description": "Printed subtotal is 25.00 more than the line amounts"
+  },
+  {
+    "file": "invoices/038_p06.pdf",
+    "case": "p06",
+    "expected_decision": "needs_review",
+    "description": "No PO number printed; PO must be inferred"
+  },
+  {
+    "file": "invoices/039_p07.pdf",
+    "case": "p07",
+    "expected_decision": "auto_approve",
+    "description": "Rate below PO price"
+  },
+  {
+    "file": "invoices/040_p08.pdf",
+    "case": "p08",
+    "expected_decision": "auto_approve",
+    "description": "Clean 2-way match"
+  },
+  {
+    "file": "invoices/041_h01.pdf",
+    "case": "h01",
+    "expected_decision": "auto_approve",
+    "description": "Two-page invoice, 30 lines"
+  },
+  {
+    "file": "invoices/042_h02.pdf",
+    "case": "h02",
+    "expected_decision": "auto_approve",
+    "description": "Two-page invoice, 45 lines"
+  },
+  {
+    "file": "invoices/043_h03.pdf",
+    "case": "h03",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/044_h04.pdf",
+    "case": "h04",
+    "expected_decision": "needs_review",
+    "description": "Two pages; one unit price 15% above PO"
+  },
+  {
+    "file": "invoices/045_h05.pdf",
+    "case": "h05",
+    "expected_decision": "auto_approve",
+    "description": "Five lines short-received; invoice bills only what arrived"
+  },
+  {
+    "file": "invoices/046_h06.pdf",
+    "case": "h06",
+    "expected_decision": "needs_review",
+    "description": "Goods invoiced before any receipt was posted"
+  },
+  {
+    "file": "invoices/047_h07.pdf",
+    "case": "h07",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/048_h08.pdf",
+    "case": "h08",
+    "expected_decision": "needs_review",
+    "description": "No PO number printed; PO must be inferred"
+  },
+  {
+    "file": "invoices/049_h09.pdf",
+    "case": "h09",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  },
+  {
+    "file": "invoices/050_h10.pdf",
+    "case": "h10",
+    "expected_decision": "auto_approve",
+    "description": "Clean 3-way match"
+  }
+]

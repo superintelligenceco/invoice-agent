@@ -1,0 +1,39 @@
+{
+  "file": "invoices/014_b02.pdf",
+  "case": "b02",
+  "vendor_layout": "brightforge",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0402",
+    "invoice_date": "2026-03-15",
+    "due_date": "2026-04-14",
+    "po_number": "PO-2026-0112",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Hydraulikschlauch DN10 1m / Hydraulic hose DN10",
+        "quantity": "6",
+        "unit_price": "23.40",
+        "amount": "140.40",
+        "sku": "BF-40220"
+      },
+      {
+        "description": "Zahnriemen HTD 8M / Timing belt HTD 8M",
+        "quantity": "2",
+        "unit_price": "57.00",
+        "amount": "114.00",
+        "sku": "BF-40440"
+      }
+    ],
+    "subtotal": "254.40",
+    "discount": "0.00",
+    "tax": "48.34",
+    "total": "302.74"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0112",
+    "reason_codes": []
+  }
+}

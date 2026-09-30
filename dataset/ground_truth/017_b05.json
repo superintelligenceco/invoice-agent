@@ -1,0 +1,34 @@
+{
+  "file": "invoices/017_b05.pdf",
+  "case": "b05",
+  "vendor_layout": "brightforge",
+  "description": "Billed 25 units against a PO for 20",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0405",
+    "invoice_date": "2026-03-18",
+    "due_date": "2026-04-17",
+    "po_number": "PO-2026-0115",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Sechskantschraube M8x40 / Hex bolt M8x40 (100)",
+        "quantity": "25",
+        "unit_price": "12.10",
+        "amount": "302.50",
+        "sku": "BF-40330"
+      }
+    ],
+    "subtotal": "302.50",
+    "discount": "0.00",
+    "tax": "57.48",
+    "total": "359.98"
+  },
+  "expected": {
+    "decision": "reject",
+    "po_number": "PO-2026-0115",
+    "reason_codes": [
+      "QTY_EXCEEDS_ORDERED"
+    ]
+  }
+}

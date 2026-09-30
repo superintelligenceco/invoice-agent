@@ -1,0 +1,39 @@
+{
+  "file": "invoices/015_b03.pdf",
+  "case": "b03",
+  "vendor_layout": "brightforge",
+  "description": "Unit price 1% above PO, inside tolerance",
+  "invoice": {
+    "vendor": "Brightforge Maschinenteile GmbH",
+    "invoice_number": "BF-2026/0403",
+    "invoice_date": "2026-03-16",
+    "due_date": "2026-04-15",
+    "po_number": "PO-2026-0113",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Industriefett 1kg / Industrial grease 1kg",
+        "quantity": "20",
+        "unit_price": "15.45",
+        "amount": "309.00",
+        "sku": "BF-40660"
+      },
+      {
+        "description": "Kugellager 6204-2RS / Ball bearing 6204-2RS",
+        "quantity": "100",
+        "unit_price": "4.85",
+        "amount": "485.00",
+        "sku": "BF-40110"
+      }
+    ],
+    "subtotal": "794.00",
+    "discount": "0.00",
+    "tax": "150.86",
+    "total": "944.86"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0113",
+    "reason_codes": []
+  }
+}

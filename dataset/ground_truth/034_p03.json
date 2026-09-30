@@ -1,0 +1,34 @@
+{
+  "file": "invoices/034_p03.pdf",
+  "case": "p03",
+  "vendor_layout": "pinecone",
+  "description": "20 hours billed against 16 ordered",
+  "invoice": {
+    "vendor": "Pinecone Cloud Services Inc.",
+    "invoice_number": "PCS-2026-0033",
+    "invoice_date": "2026-04-04",
+    "due_date": "2026-05-04",
+    "po_number": "PO-2026-0129",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Cloud architecture consulting",
+        "quantity": "20",
+        "unit_price": "185.00",
+        "amount": "3700.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "3700.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "total": "3700.00"
+  },
+  "expected": {
+    "decision": "reject",
+    "po_number": "PO-2026-0129",
+    "reason_codes": [
+      "QTY_EXCEEDS_ORDERED"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "file": "invoices/001_q01.pdf",
+  "case": "q01",
+  "vendor_layout": "quillfeather",
+  "description": "Clean 3-way match",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10401",
+    "invoice_date": "2026-03-02",
+    "due_date": "2026-04-01",
+    "po_number": "PO-2026-0101",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Copy paper A4 80gsm, ream of 500",
+        "quantity": "20",
+        "unit_price": "6.49",
+        "amount": "129.80",
+        "sku": null
+      },
+      {
+        "description": "Ballpoint pens, blue, box of 50",
+        "quantity": "5",
+        "unit_price": "11.90",
+        "amount": "59.50",
+        "sku": null
+      },
+      {
+        "description": "Staples 26/6, box of 5000",
+        "quantity": "10",
+        "unit_price": "3.20",
+        "amount": "32.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "221.30",
+    "discount": "0.00",
+    "tax": "18.26",
+    "total": "239.56"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0101",
+    "reason_codes": []
+  }
+}

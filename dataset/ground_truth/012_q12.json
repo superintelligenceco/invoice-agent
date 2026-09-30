@@ -1,0 +1,32 @@
+{
+  "file": "invoices/012_q12.pdf",
+  "case": "q12",
+  "vendor_layout": "quillfeather",
+  "description": "Clean single line",
+  "invoice": {
+    "vendor": "Quillfeather Office Supply Co.",
+    "invoice_number": "QOS-10411",
+    "invoice_date": "2026-03-13",
+    "due_date": "2026-04-12",
+    "po_number": "PO-2026-0110",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Desk organiser, mesh, 5 compartments",
+        "quantity": "5",
+        "unit_price": "18.40",
+        "amount": "92.00",
+        "sku": null
+      }
+    ],
+    "subtotal": "92.00",
+    "discount": "0.00",
+    "tax": "7.59",
+    "total": "99.59"
+  },
+  "expected": {
+    "decision": "auto_approve",
+    "po_number": "PO-2026-0110",
+    "reason_codes": []
+  }
+}
