@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Local runs
+ledger.json
+out/
+eval-report.md
+
+# Node, in case you add tooling
+node_modules/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
