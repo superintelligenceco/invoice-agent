@@ -39,8 +39,9 @@ calls a paid API, and never commit a real invoice.
 
 ## Checks
 
-Run these before you push. CI runs the same commands on Python 3.11, 3.12, and 3.13, on Linux and
-macOS.
+Run these before you push, or run `make lint typecheck test eval`. CI runs the same commands on
+Python 3.11, 3.12, and 3.13, on Linux and macOS. `make help` lists every task, and
+`pre-commit install` runs the linters on each commit.
 
 ```sh
 ruff check .
@@ -74,8 +75,7 @@ To fix formatting and safe lint issues automatically, run `ruff format . && ruff
 ## Commits and pull requests
 
 - Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages and PR
-  titles, for example `feat(match): flag invoices dated before the PO`. The release workflow builds
-  the changelog from them.
+  titles, for example `feat(match): flag invoices dated before the PO`.
 - Keep each pull request focused on one change.
 - Update `CHANGELOG.md` under `Unreleased` when behavior changes.
 
