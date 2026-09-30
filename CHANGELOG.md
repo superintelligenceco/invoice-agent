@@ -6,6 +6,23 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+### Added
+
+- A web page at `/` of the HTTP service: upload an invoice PDF and see the extracted fields, the
+  line matches, and the decision with its reasons. It is a single static file with no new
+  dependencies.
+- Standalone `invoice-agent` executables for linux-x64, linux-arm64, macos-arm64, and
+  windows-x64, with a `SHA256SUMS` file, attached to each GitHub Release.
+- A `linux/amd64` and `linux/arm64` image on `ghcr.io/superintelligenceco/invoice-agent`, tagged
+  `vX.Y.Z` and `latest` on releases and `edge` on manual builds.
+- The wheel and sdist attached to each GitHub Release.
+- A Ship workflow that builds and smoke-tests all of the above when you push a `v*` tag.
+
+### Fixed
+
+- CodeQL no longer fails on a private repository without code scanning. It keeps the SARIF
+  results as a run artifact instead.
+
 ## [0.1.0] - 2026-09-30
 
 The first release. invoice-agent extracts invoice PDFs, matches them against purchase orders and

@@ -17,6 +17,63 @@ so a reviewer sees why an invoice stopped, and a script can route it.
 It ships with a labeled dataset of 50 synthetic invoices in five vendor layouts and an `eval`
 command that scores extraction and matching on it.
 
+## Download and run
+
+Every release ships three ways to run invoice-agent. None of them needs Python on your machine
+except the wheel.
+
+### Web app in a container
+
+The image runs on `linux/amd64` and `linux/arm64`. It serves a web page at `/` where you upload an
+invoice PDF and see the extracted fields, the line matches, and the auto-approve, needs-review, or
+reject decision with its reasons. The HTTP API runs on the same port.
+
+```sh
+docker run --rm -p 8000:8000 ghcr.io/superintelligenceco/invoice-agent:latest
+# open http://localhost:8000
+curl -s -F "file=@dataset/invoices/016_b04.pdf" http://localhost:8000/process
+```
+
+The image loads the sample POs and receipts from the shipped dataset. To match against your own,
+mount them and pass the paths:
+
+```sh
+docker run --rm -p 8000:8000 -v "$PWD/erp:/data:ro" ghcr.io/superintelligenceco/invoice-agent:latest \
+  serve --host 0.0.0.0 --port 8000 --pos /data/purchase_orders.csv --receipts /data/receipts.csv
+```
+
+Tags: `vX.Y.Z` and `latest` for releases, `edge` for manual builds from `main`.
+
+### Standalone executable
+
+Download the single-file `invoice-agent` CLI for your platform. It bundles Python and every
+dependency, including `serve`.
+
+| Platform | Asset |
+| --- | --- |
+| Linux x64 | `invoice-agent-linux-x64` |
+| Linux arm64 | `invoice-agent-linux-arm64` |
+| macOS arm64 (Apple silicon) | `invoice-agent-macos-arm64` |
+| Windows x64 | `invoice-agent-windows-x64.exe` |
+
+```sh
+curl -fLO https://github.com/superintelligenceco/invoice-agent/releases/latest/download/invoice-agent-linux-x64
+curl -fLO https://github.com/superintelligenceco/invoice-agent/releases/latest/download/SHA256SUMS
+sha256sum --check --ignore-missing SHA256SUMS
+chmod +x invoice-agent-linux-x64
+./invoice-agent-linux-x64 process invoice.pdf --pos purchase_orders.csv --receipts receipts.csv
+```
+
+### Wheel and sdist
+
+Each release attaches `invoice_agent-X.Y.Z-py3-none-any.whl` and `invoice_agent-X.Y.Z.tar.gz`.
+Install the wheel with the extras you need:
+
+```sh
+VERSION=0.2.0
+pip install "invoice-agent[api] @ https://github.com/superintelligenceco/invoice-agent/releases/download/v${VERSION}/invoice_agent-${VERSION}-py3-none-any.whl"
+```
+
 ## Quickstart
 
 ```sh
@@ -217,7 +274,8 @@ pip install -e ".[ocr]"       # plus OCR for scanned PDFs (needs the tesseract b
 pip install -e ".[dev]"       # everything for development
 ```
 
-Or run the container, which serves the API with the sample POs and receipts:
+Or build and run the container yourself. It serves the web page and the API with the sample POs
+and receipts:
 
 ```sh
 docker build -t invoice-agent .
@@ -232,7 +290,7 @@ docker run --rm -p 8000:8000 invoice-agent
 | `invoice-agent process FILE.pdf... --pos POS [--receipts R]` | Extract, validate, match, and decide, in order. Options: `--json`, `--ledger FILE`, `--policy FILE`. |
 | `invoice-agent eval [--dataset DIR]` | Score extraction and matching. Options: `--oracle`, `--format json`, `--output FILE`, `--min-decision-accuracy 0.95`. |
 | `invoice-agent generate-dataset [DIR]` | Regenerate the synthetic dataset. Output is deterministic. |
-| `invoice-agent serve --pos POS [--receipts R]` | Run the HTTP API on `127.0.0.1:8000`. |
+| `invoice-agent serve --pos POS [--receipts R]` | Run the web page and the HTTP API on `127.0.0.1:8000`. |
 
 Every command that extracts takes `--extractor layout|llm` and `--ocr`.
 
@@ -260,6 +318,7 @@ curl -s -F "file=@dataset/invoices/016_b04.pdf" http://127.0.0.1:8000/process
 
 | Endpoint | Body | Returns |
 | --- | --- | --- |
+| `GET /` | | The upload page: pick a PDF, see the fields, decision, and reasons |
 | `GET /health` | | Status, version, extractor, PO count, invoices seen |
 | `POST /extract` | multipart `file` (PDF, 20 MB max) | `Invoice` |
 | `POST /process` | multipart `file` | `Result` with decision and reasons |

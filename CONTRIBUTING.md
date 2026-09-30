@@ -33,7 +33,8 @@ calls a paid API, and never commit a real invoice.
 | `src/invoice_agent/pipeline.py` | Ties the stages together and makes the decision. |
 | `src/invoice_agent/evaluate.py` | Scoring for `invoice-agent eval`. |
 | `src/invoice_agent/synth/` | The synthetic dataset generator. |
-| `src/invoice_agent/api.py`, `cli.py` | The HTTP service and the command line. |
+| `src/invoice_agent/api.py`, `ui.html`, `cli.py` | The HTTP service, its upload page, and the command line. |
+| `packaging/entry.py` | The entry point for the PyInstaller executables. |
 | `dataset/` | Generated invoices, ground truth, POs, and receipts. |
 
 ## Checks
@@ -77,6 +78,39 @@ To fix formatting and safe lint issues automatically, run `ruff format . && ruff
   the changelog from them.
 - Keep each pull request focused on one change.
 - Update `CHANGELOG.md` under `Unreleased` when behavior changes.
+
+## Releases and downloadable artifacts
+
+A maintainer releases by bumping the version in `pyproject.toml` and
+`src/invoice_agent/__init__.py`, moving the `Unreleased` notes in `CHANGELOG.md` under the new
+version, and pushing an annotated `vX.Y.Z` tag. The tag starts the
+[Ship workflow](.github/workflows/ship.yml), which creates the GitHub Release and attaches the
+files.
+
+The Ship workflow builds and smoke-tests:
+
+- the wheel and sdist,
+- PyInstaller executables for linux-x64, linux-arm64, macos-arm64, and windows-x64, and a
+  `SHA256SUMS` file,
+- the `linux/amd64` and `linux/arm64` image on `ghcr.io/superintelligenceco/invoice-agent`.
+
+On a tag it attaches the files to the GitHub Release and tags the image `vX.Y.Z` and `latest`.
+To test the pipeline without releasing, run it by hand:
+
+```sh
+gh workflow run ship.yml --ref main
+```
+
+A manual run uploads the files as run artifacts and tags the image `edge`.
+
+To build the executable locally:
+
+```sh
+pip install ".[api]" pyinstaller
+pyinstaller --onefile --name invoice-agent --collect-data invoice_agent --collect-data pdfminer \
+  --collect-submodules uvicorn packaging/entry.py
+./dist/invoice-agent process dataset/invoices/001_q01.pdf --pos dataset/purchase_orders.json
+```
 
 ## Code of conduct
 
