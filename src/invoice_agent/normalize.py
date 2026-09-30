@@ -161,6 +161,8 @@ _VENDOR_NOISE = re.compile(
 def normalize_vendor(name: str | None) -> str:
     if not name:
         return ""
-    s = _VENDOR_NOISE.sub(" ", name.lower())
-    s = re.sub(r"[^a-z0-9& ]", " ", s)
+    # Drop punctuation and non-ASCII first, so a legal suffix next to a character such as
+    # "¹" is still a whole word when the suffixes are removed.
+    s = re.sub(r"[^a-z0-9& ]", " ", name.lower())
+    s = _VENDOR_NOISE.sub(" ", s)
     return re.sub(r"\s+", " ", s).strip()

@@ -20,6 +20,9 @@ All notable changes to this project are documented in this file. The format foll
 
 ### Fixed
 
+- Vendor names now drop a legal suffix such as `Co` or `Ltd` even when a non-ASCII character
+  touches it, so normalizing a name twice gives the same result. A property-based test found
+  this.
 - CodeQL no longer fails on a private repository without code scanning. It keeps the SARIF
   results as a run artifact instead.
 
