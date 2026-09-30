@@ -1,11 +1,11 @@
 # syntax=docker/dockerfile:1
-FROM python:3.12-slim AS build
+FROM python:3.14-slim AS build
 WORKDIR /src
 COPY pyproject.toml README.md LICENSE ./
 COPY src ./src
 RUN pip install --no-cache-dir build && python -m build --wheel --outdir /dist
 
-FROM python:3.12-slim
+FROM python:3.14-slim
 LABEL org.opencontainers.image.source="https://github.com/superintelligenceco/invoice-agent" \
       org.opencontainers.image.description="Invoice extraction and PO matching: web page and HTTP API" \
       org.opencontainers.image.licenses="Apache-2.0"
