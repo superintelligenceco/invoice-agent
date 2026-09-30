@@ -1,0 +1,14 @@
+# Link checker settings for the Links workflow.
+max_retries = 3
+timeout = 30
+accept = ["200..=299", "429"]
+exclude_path = ["dataset", "site", ".venv"]
+exclude = [
+  "^https?://localhost",
+  "^https?://127\\.0\\.0\\.1",
+  # Needs a signed-in session.
+  "^https://codespaces\\.new/",
+  # The latest-release download links redirect to files that exist only after a release.
+  "/releases/latest/download/",
+  "/releases/download/",
+]

@@ -1,0 +1,76 @@
+site_name: invoice-agent
+site_description: Extract invoice PDFs and run 2-way and 3-way matching against purchase orders and receipts, with explainable decisions.
+site_url: https://superintelligenceco.github.io/invoice-agent/
+repo_url: https://github.com/superintelligenceco/invoice-agent
+repo_name: superintelligenceco/invoice-agent
+edit_uri: edit/main/docs/
+copyright: Apache-2.0
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+hooks:
+  - docs/hooks/cli_help.py
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_source: false
+            show_root_heading: true
+            members_order: source
+            docstring_style: google
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+exclude_docs: |
+  hooks/
+  demo/
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Concepts: concepts.md
+  - Architecture: architecture.md
+  - Reference:
+      - CLI: reference/cli.md
+      - HTTP API: reference/http.md
+      - Python API: reference/python.md
+  - FAQ: faq.md
+  - Decisions:
+      - adr/index.md
+      - adr/0001-decimal-money.md
+      - adr/0002-offline-layout-extractor.md
+      - adr/0003-strictest-severity-decision.md
+      - adr/0004-tag-driven-release.md
