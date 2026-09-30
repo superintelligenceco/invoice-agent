@@ -7,9 +7,12 @@ from __future__ import annotations
 
 import threading
 from collections.abc import Iterable
+from functools import cache
+from importlib.resources import files
 from typing import Any
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.responses import HTMLResponse
 
 from . import __version__
 from .extract import Extractor
@@ -20,6 +23,12 @@ from .policy import MatchPolicy
 from .schema import GoodsReceipt, Invoice, PurchaseOrder, Result
 
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024
+
+
+@cache
+def _ui_page() -> str:
+    """The single-page upload UI served at ``/``."""
+    return files(__package__).joinpath("ui.html").read_text(encoding="utf-8")
 
 
 def create_app(
@@ -46,6 +55,10 @@ def create_app(
         if len(data) > MAX_UPLOAD_BYTES:
             raise HTTPException(status_code=413, detail="file is larger than 20 MB")
         return data
+
+    @app.get("/", response_class=HTMLResponse, include_in_schema=False)
+    def ui() -> str:
+        return _ui_page()
 
     @app.get("/health")
     def health() -> dict[str, Any]:

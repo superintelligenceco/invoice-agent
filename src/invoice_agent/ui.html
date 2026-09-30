@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>invoice-agent</title>
+<style>
+  :root { color-scheme: light dark; --ok: #1a7f37; --warn: #9a6700; --bad: #cf222e; --muted: #6e7781; }
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 820px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.4rem; margin-bottom: .2rem; }
+  p.sub { color: var(--muted); margin-top: 0; }
+  form { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; padding: 1rem;
+         border: 1px dashed var(--muted); border-radius: 8px; }
+  button { padding: .4rem 1rem; }
+  #decision { font-size: 1.3rem; font-weight: 700; margin: 1.2rem 0 .4rem; }
+  .auto_approve { color: var(--ok); } .needs_review { color: var(--warn); } .reject { color: var(--bad); }
+  table { border-collapse: collapse; width: 100%; margin: .6rem 0; }
+  th, td { text-align: left; padding: .25rem .5rem; border-bottom: 1px solid #8884; vertical-align: top; }
+  th { font-weight: 600; } #fields th { width: 9rem; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  ul { padding-left: 1.2rem; } li { margin: .2rem 0; }
+  code { font-size: .9em; } .error { color: var(--bad); } .hidden { display: none; }
+</style>
+</head>
+<body>
+<h1>invoice-agent</h1>
+<p class="sub">Upload an invoice PDF to extract its fields and match it against the loaded purchase
+orders and receipts. <a href="docs">API docs</a></p>
+<form id="form">
+  <input type="file" id="file" name="file" accept="application/pdf,.pdf" required>
+  <button type="submit" id="submit">Process</button>
+  <span id="status"></span>
+</form>
+<div id="out" class="hidden">
+  <div id="decision"></div>
+  <h2>Reasons</h2>
+  <ul id="reasons"></ul>
+  <h2>Extracted fields</h2>
+  <table id="fields"></table>
+  <h2>Line items</h2>
+  <table id="lines"><thead><tr><th>#</th><th>Description</th><th>Qty</th><th>Unit price</th>
+    <th>Amount</th><th>PO line</th></tr></thead><tbody></tbody></table>
+</div>
+<script>
+const LABEL = { auto_approve: "Auto-approve", needs_review: "Needs review", reject: "Reject" };
+const $ = (id) => document.getElementById(id);
+function cell(row, text, cls) {
+  const td = row.insertCell();
+  td.textContent = text === null || text === undefined || text === "" ? "-" : String(text);
+  if (cls) td.className = cls;
+}
+function render(r) {
+  const inv = r.invoice;
+  $("decision").textContent = LABEL[r.decision] || r.decision;
+  $("decision").className = r.decision;
+  const reasons = $("reasons");
+  reasons.replaceChildren();
+  if (!r.reasons.length) { const li = document.createElement("li"); li.textContent = "No findings."; reasons.append(li); }
+  for (const x of r.reasons) {
+    const li = document.createElement("li");
+    const code = document.createElement("code");
+    code.textContent = x.code + " (" + x.severity + ")";
+    li.append(code, ": " + x.message);
+    reasons.append(li);
+  }
+  const po = r.po_number ? r.po_number + (r.match_type ? " (" + r.match_type + ")" : "") : null;
+  const fields = [["Vendor", inv.vendor], ["Invoice number", inv.invoice_number],
+    ["Invoice date", inv.invoice_date], ["Due date", inv.due_date], ["Purchase order", po],
+    ["Currency", inv.currency], ["Subtotal", inv.subtotal], ["Discount", inv.discount],
+    ["Tax", inv.tax], ["Total", inv.total]];
+  const ft = $("fields");
+  ft.replaceChildren();
+  for (const [k, v] of fields) {
+    const row = ft.insertRow();
+    const th = document.createElement("th"); th.textContent = k; row.append(th);
+    cell(row, v);
+  }
+  const poLine = {};
+  for (const m of r.line_matches) poLine[m.invoice_line] = m.po_line;
+  const body = $("lines").tBodies[0];
+  body.replaceChildren();
+  inv.line_items.forEach((li, i) => {
+    const row = body.insertRow();
+    cell(row, i + 1); cell(row, li.description); cell(row, li.quantity, "num");
+    cell(row, li.unit_price, "num"); cell(row, li.amount, "num"); cell(row, poLine[i + 1]);
+  });
+  $("out").classList.remove("hidden");
+}
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const file = $("file").files[0];
+  if (!file) return;
+  $("status").textContent = "Processing...";
+  $("status").className = "";
+  $("submit").disabled = true;
+  try {
+    const data = new FormData();
+    data.append("file", file);
+    const resp = await fetch("process", { method: "POST", body: data });
+    const body = await resp.json();
+    if (!resp.ok) throw new Error(typeof body.detail === "string" ? body.detail : resp.statusText);
+    render(body);
+    $("status").textContent = "";
+  } catch (err) {
+    $("status").textContent = "Error: " + err.message;
+    $("status").className = "error";
+  } finally {
+    $("submit").disabled = false;
+  }
+});
+</script>
+</body>
+</html>

@@ -60,3 +60,11 @@ def test_match_json_invoice(client: TestClient) -> None:
     result = client.post("/match", json=extracted).json()
     assert result["decision"] == "needs_review"
     assert [r["code"] for r in result["reasons"]] == ["PRICE_VARIANCE"]
+
+
+def test_ui_page(client: TestClient) -> None:
+    resp = client.get("/")
+    assert resp.status_code == 200
+    assert resp.headers["content-type"].startswith("text/html")
+    assert 'type="file"' in resp.text
+    assert 'fetch("process"' in resp.text
