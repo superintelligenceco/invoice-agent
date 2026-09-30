@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: If you use invoice-agent in your work, cite it with these metadata.
+title: "invoice-agent: invoice extraction and purchase order matching with explainable decisions"
+type: software
+authors:
+  - name: superintelligenceco contributors
+repository-code: https://github.com/superintelligenceco/invoice-agent
+url: https://superintelligenceco.github.io/invoice-agent/
+abstract: >-
+  invoice-agent reads invoice PDFs, matches them against purchase orders and goods receipts with
+  2-way and 3-way matching, and returns an auto-approve, needs-review, or reject decision with
+  stable reason codes. It ships a labeled synthetic dataset and an eval command.
+keywords:
+  - accounts payable
+  - invoice
+  - three-way match
+  - purchase order
+  - pdf extraction
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-09-30"

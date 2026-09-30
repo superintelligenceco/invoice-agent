@@ -1,0 +1,31 @@
+# invoice-agent
+
+> invoice-agent reads invoice PDFs, matches them against purchase orders and goods receipts (2-way and 3-way matching), and returns an auto-approve, needs-review, or reject decision with stable reason codes and human-readable reasons. It runs offline, ships as a CLI, a FastAPI service with an upload page, standalone executables, and a multi-arch container image, and includes a labeled dataset of 50 synthetic invoices with an eval command.
+
+Money is `Decimal` end to end. Extraction is pluggable: an offline layout extractor, or an extractor that calls any OpenAI-compatible endpoint. Every finding is a `Reason` with a code, a severity (`info`, `review`, `reject`), a message, and structured data. The decision is the strictest severity among the reasons.
+
+## Docs
+
+- [README](https://github.com/superintelligenceco/invoice-agent/blob/main/README.md): overview, download, quickstart, CLI, HTTP API, schema, matching rules, reason codes, eval results
+- [Documentation site](https://superintelligenceco.github.io/invoice-agent/): quickstart, concepts, CLI and API reference, architecture, FAQ, ADRs
+- [CONTRIBUTING](https://github.com/superintelligenceco/invoice-agent/blob/main/CONTRIBUTING.md): setup, checks, how to add a matching rule or an invoice layout, releases
+- [CHANGELOG](https://github.com/superintelligenceco/invoice-agent/blob/main/CHANGELOG.md)
+
+## Key source files
+
+- [schema.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/schema.py): Pydantic models `Invoice`, `PurchaseOrder`, `GoodsReceipt`, `Result`, `Reason`
+- [pipeline.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/pipeline.py): ingest, extract, validate, match, and decide
+- [match.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/match.py): duplicates, PO lookup and inference, line alignment, price and quantity checks, the ledger
+- [validate.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/validate.py): arithmetic checks
+- [normalize.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/normalize.py): amount, date, currency, and vendor parsing
+- [reasons.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/reasons.py): the reason code catalog
+- [extract/layout.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/extract/layout.py): the offline extractor
+- [extract/llm.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/extract/llm.py): the OpenAI-compatible extractor
+- [api.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/api.py): the FastAPI service
+- [cli.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/cli.py): the command line
+- [evaluate.py](https://github.com/superintelligenceco/invoice-agent/blob/main/src/invoice_agent/evaluate.py): eval metrics
+
+## Optional
+
+- [Dataset](https://github.com/superintelligenceco/invoice-agent/tree/main/dataset): 50 invoice PDFs, ground truth, POs, and receipts
+- [Examples](https://github.com/superintelligenceco/invoice-agent/tree/main/examples): CSV POs and receipts, a policy file, and a Python API script
