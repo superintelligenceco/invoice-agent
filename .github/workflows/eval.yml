@@ -1,0 +1,48 @@
+# Runs the offline extractor and the matching rules over the shipped dataset
+# and posts the scores to the job summary.
+name: Eval
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eval-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  eval:
+    name: Eval on the synthetic dataset
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install -e ".[synth]"
+      - name: Check the dataset is up to date with the generator
+        run: |
+          invoice-agent generate-dataset "$RUNNER_TEMP/dataset"
+          diff -r --exclude=invoices "$RUNNER_TEMP/dataset" dataset
+      - name: Layout extractor, end to end
+        run: invoice-agent eval --output eval-layout.md --min-decision-accuracy 1
+      - name: Matching rules alone (ground-truth extraction)
+        run: invoice-agent eval --oracle --output eval-oracle.md
+      - name: Write the job summary
+        run: |
+          {
+            echo "## invoice-agent eval"
+            echo
+            cat eval-layout.md
+            echo
+            cat eval-oracle.md
+          } >> "$GITHUB_STEP_SUMMARY"

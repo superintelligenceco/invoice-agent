@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a wrong extraction, a wrong decision, a crash, or a bad reason message.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Never attach a real invoice that holds personal or confidential data. Reproduce the problem with a synthetic invoice, or redact it first. To report a security vulnerability, follow [SECURITY.md](https://github.com/superintelligenceco/invoice-agent/blob/main/SECURITY.md) instead.
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Pipeline stage
+      options:
+        - ingest (PDF text or OCR)
+        - extraction (layout extractor)
+        - extraction (LLM extractor)
+        - arithmetic validation
+        - PO matching or duplicate detection
+        - eval
+        - HTTP API
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe what you saw and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The command you ran. If a file from `dataset/` shows the problem, name it.
+      placeholder: |
+        invoice-agent process dataset/invoices/016_b04.pdf --pos dataset/purchase_orders.json
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Paste the terminal output or the JSON result. Remove secrets and personal data first.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: invoice-agent version
+      description: Output of `invoice-agent --version`.
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version and OS
+      placeholder: Python 3.12.4, Ubuntu 24.04
+    validations:
+      required: true
