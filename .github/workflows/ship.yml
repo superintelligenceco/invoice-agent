@@ -72,10 +72,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { target: linux-x64, os: ubuntu-latest, ext: "" }
-          - { target: linux-arm64, os: ubuntu-24.04-arm, ext: "" }
-          - { target: macos-arm64, os: macos-latest, ext: "" }
-          - { target: windows-x64, os: windows-latest, ext: ".exe" }
+          - { target: linux-x64, os: ubuntu-latest, ext: "", older_glibc: true }
+          - { target: linux-arm64, os: ubuntu-24.04-arm, ext: "", older_glibc: true }
+          - { target: macos-arm64, os: macos-latest, ext: "", older_glibc: false }
+          - { target: windows-x64, os: windows-latest, ext: ".exe", older_glibc: false }
     defaults:
       run:
         shell: bash
@@ -84,16 +84,21 @@ jobs:
         with:
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        if: ${{ !matrix.older_glibc }}
         with:
           python-version: "3.12"
-      - name: Install
-        run: python -m pip install ".[api]" "pyinstaller==${PYINSTALLER_VERSION}"
       - name: Build
+        env:
+          OLDER_GLIBC: ${{ matrix.older_glibc }}
         run: |
-          pyinstaller --onefile --name invoice-agent --noconfirm \
-            --collect-data invoice_agent --collect-data pdfminer --collect-submodules uvicorn \
-            --distpath out --workpath "$RUNNER_TEMP/pyi" --specpath "$RUNNER_TEMP/pyi" \
-            packaging/entry.py
+          if [ "$OLDER_GLIBC" = true ]; then
+            # Build on Debian 11 (glibc 2.31) so the executable runs on older distributions too.
+            docker run --rm -e PYINSTALLER_VERSION -v "$PWD:/src" -w /src \
+              python:3.12-bullseye packaging/build_exe.sh
+            sudo chown -R "$(id -u):$(id -g)" out
+          else
+            packaging/build_exe.sh
+          fi
           mkdir -p exe
           mv "out/invoice-agent${{ matrix.ext }}" "exe/invoice-agent-${{ matrix.target }}${{ matrix.ext }}"
       - name: Smoke test

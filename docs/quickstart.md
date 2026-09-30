@@ -17,7 +17,7 @@ curl -fsSL https://raw.githubusercontent.com/superintelligenceco/invoice-agent/m
 
 The installer downloads the standalone executable for your OS and CPU from the latest GitHub
 Release, checks it against `SHA256SUMS`, and puts it in `~/.local/bin`. Set
-`INVOICE_AGENT_VERSION=v0.2.0` to pin a version, or `INVOICE_AGENT_INSTALL_DIR` to change the
+`INVOICE_AGENT_VERSION=v0.2.1` to pin a version, or `INVOICE_AGENT_INSTALL_DIR` to change the
 target directory.
 
 ## Get the sample data

@@ -6,6 +6,14 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-09-30
+
+### Fixed
+
+- The Linux executables run on glibc 2.31 and newer. The 0.2.0 files were built on Ubuntu 24.04
+  and needed glibc 2.38, so they failed to start on Debian 11 and 12, Ubuntu 22.04, and Oracle
+  Linux 9.
+
 ## [0.2.0] - 2026-09-30
 
 invoice-agent now ships as a package on PyPI, standalone executables, and a signed multi-arch
@@ -94,6 +102,7 @@ goods receipts, and returns an auto-approve, needs-review, or reject decision wi
 - Decision accuracy, PO link accuracy, exception and reject precision and recall, and reason code
   precision and recall are all 100.0% on the 50 invoices.
 
-[Unreleased]: https://github.com/superintelligenceco/invoice-agent/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/superintelligenceco/invoice-agent/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/superintelligenceco/invoice-agent/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/superintelligenceco/invoice-agent/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/superintelligenceco/invoice-agent/releases/tag/v0.1.0

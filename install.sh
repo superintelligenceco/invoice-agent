@@ -8,7 +8,7 @@
 # upgrade. The executable bundles Python and every dependency; you don't need Python installed.
 #
 # Environment variables:
-#   INVOICE_AGENT_VERSION      release tag to install, for example v0.2.0 (default: latest)
+#   INVOICE_AGENT_VERSION      release tag to install, for example v0.2.1 (default: latest)
 #   INVOICE_AGENT_INSTALL_DIR  where to put the executable (default: $HOME/.local/bin)
 
 set -eu

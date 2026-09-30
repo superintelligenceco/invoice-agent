@@ -97,7 +97,7 @@ The same files are on [PyPI](https://pypi.org/project/invoice-agent/). To instal
 the release instead, with the extras you need:
 
 ```sh
-VERSION=0.2.0
+VERSION=0.2.1
 pip install "invoice-agent[api] @ https://github.com/superintelligenceco/invoice-agent/releases/download/v${VERSION}/invoice_agent-${VERSION}-py3-none-any.whl"
 ```
 
