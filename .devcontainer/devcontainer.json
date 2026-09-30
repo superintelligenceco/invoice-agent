@@ -1,0 +1,26 @@
+{
+  "name": "invoice-agent",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "postCreateCommand": "python -m venv .venv && .venv/bin/pip install -U pip && .venv/bin/pip install -e '.[dev,docs]' && .venv/bin/pip install pre-commit && .venv/bin/pre-commit install",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "invoice-agent web page and API" }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.mypy-type-checker",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
+        "github.vscode-github-actions"
+      ]
+    }
+  }
+}

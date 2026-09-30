@@ -17,6 +17,11 @@ coverage.xml
 htmlcov/
 
 # Local runs
+site/
+.benchmarks/
+*.spec
+mutants/
+.hypothesis/
 ledger.json
 out/
 eval-report.md
@@ -26,5 +31,7 @@ node_modules/
 
 # Editors and OS
 .idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 .DS_Store
