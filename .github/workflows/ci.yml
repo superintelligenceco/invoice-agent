@@ -52,7 +52,15 @@ jobs:
           cache-dependency-path: pyproject.toml
       - run: python -m pip install -e ".[dev]"
       - name: Pytest with coverage
-        run: pytest --cov --cov-report=term --cov-report=xml
+        run: pytest --benchmark-disable --cov --cov-report=term --cov-report=xml
+      - name: Coverage summary
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        run: |
+          {
+            echo "## Coverage"
+            echo
+            coverage report --format=markdown --skip-covered
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Build the wheel and sdist
         if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
         run: |
@@ -60,6 +68,36 @@ jobs:
           python -m build
           python -m pip install --force-reinstall dist/*.whl
           invoice-agent --version
+
+  bench:
+    name: Benchmarks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: python -m pip install -e ".[dev]"
+      - name: Compare with the committed baseline (fails above 2x)
+        run: python scripts/bench_check.py --json bench.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: bench
+          path: bench.json
+
+  actionlint:
+    name: Lint workflows
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: raven-actions/actionlint@3d39aea434753780c3b3d4a1a31c854b4dbf49d7 # v2.2.0
 
   docker:
     name: Docker image

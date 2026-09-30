@@ -1,0 +1,17 @@
+# Runs the web page and HTTP API on http://localhost:8000 with the sample POs and receipts.
+#   docker compose up --build
+services:
+  invoice-agent:
+    build: .
+    image: ghcr.io/superintelligenceco/invoice-agent:latest
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"
+      interval: 5s
+      timeout: 3s
+      retries: 12
