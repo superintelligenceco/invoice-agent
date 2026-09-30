@@ -216,7 +216,7 @@ jobs:
             echo "Digest: \`$IMAGE@$DIGEST\`"
             echo
             echo "Tags:"
-            echo "$TAGS" | sed 's/^/- /'
+            printf '%s\n' "$TAGS" | while IFS= read -r t; do echo "- $t"; done
             echo
             echo "Verify the signature:"
             echo
