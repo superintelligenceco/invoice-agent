@@ -1,0 +1,5 @@
+{
+  "test_bench_ingest_pdf": 0.07244172692298889,
+  "test_bench_layout_extract": 0.13237081468105316,
+  "test_bench_match_dataset": 0.14375169575214386
+}
