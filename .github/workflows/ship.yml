@@ -59,7 +59,7 @@ jobs:
           output-file: dist/invoice-agent-source.spdx.json
           upload-artifact: false
           upload-release-assets: false
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: dist
           path: dist/*
@@ -109,7 +109,7 @@ jobs:
             --pos dataset/purchase_orders.json --receipts dataset/receipts.json | tee out.txt
           grep -q "001_q01.pdf: AUTO-APPROVE" out.txt
           grep -q "016_b04.pdf: NEEDS REVIEW" out.txt
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: invoice-agent-${{ matrix.target }}
           path: exe/*
@@ -205,7 +205,7 @@ jobs:
           output-file: invoice-agent-image.spdx.json
           upload-artifact: false
           upload-release-assets: false
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: sbom-image
           path: invoice-agent-image.spdx.json
@@ -260,7 +260,7 @@ jobs:
           subject-checksums: assets/SHA256SUMS
       - name: Keep the files as a run artifact
         if: ${{ env.RELEASE_TAG == '' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-files
           path: assets/*
